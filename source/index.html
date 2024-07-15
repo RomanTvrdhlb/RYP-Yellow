@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+  @include('partials/header.html')
+
+  <main>
+    <section class="first-section">
+        <div class="first-section__box">
+          <div class="first-section__bg">
+            <picture>
+              <source type='image/webp' srcset='img/index/bg.webp'>
+              <img width='1920' height='443' src='img/index/bg.png' alt='image'>
+            </picture>
+          </div>
+          <div class="container">
+            <div class="first-section__inner">
+            <h1 class="title">Community Yellow Page of Philadelphia</h1>
+
+            <form class="search">
+              <span class="search__icon">
+                <svg width='20' height='20'>
+                  <use href='img/sprite/sprite.svg#search'></use>
+                </svg>
+              </span>
+              <label for="search" class="search__label">
+                <input type="text" name="search" id="search" class="search__input" placeholder="Place your keyword">
+              </label>
+              <button class="yellow-btn">SEARCH</button>
+            </form>
+
+            <button class="filter-btn">
+              <svg width='26' height='26'>
+                <use href='img/sprite/sprite.svg#filter'></use>
+              </svg>
+            </button>
+          </div>
+          </div>
+        </div>
+     
+        <div class="first-section__wrapp">
+          <div class="container">
+            <div class="first-section__content">
+            <ul class="filter-list">
+              <li class="filter-list__item">
+                <a href="#" class="filter-card">
+                  <span class="filter-card__icon">
+                    <picture>
+                      <source type='image/webp' srcset='img/filter/img1.webp'>
+                      <img width='38' height='36' src='img/filter/img1.png' alt='image'>
+                    </picture>
+                  </span>
+                  <span class="filter-card__title">Auto</span>
+                </a>
+              </li>
+              <li class="filter-list__item">
+                <a href="#" class="filter-card">
+                  <span class="filter-card__icon">
+                    <picture>
+                      <source type='image/webp' srcset='img/filter/img2.webp'>
+                      <img width='38' height='36' src='img/filter/img2.png' alt='image'>
+                    </picture>
+                  </span>
+                  <span class="filter-card__title">Medical</span>
+                </a>
+              </li>
+              <li class="filter-list__item">
+                <a href="#" class="filter-card">
+                  <span class="filter-card__icon">
+                    <picture>
+                      <source type='image/webp' srcset='img/filter/img3.webp'>
+                      <img width='38' height='36' src='img/filter/img3.png' alt='image'>
+                    </picture>
+                  </span>
+                  <span class="filter-card__title">Professional Services</span>
+                </a>
+              </li>
+              <li class="filter-list__item">
+                <a href="#" class="filter-card">
+                  <span class="filter-card__icon">
+                    <picture>
+                      <source type='image/webp' srcset='img/filter/img4.webp'>
+                      <img width='38' height='36' src='img/filter/img4.png' alt='image'>
+                    </picture>
+                  </span>
+                  <span class="filter-card__title">Leisure and Entertainment</span>
+                </a>
+              </li>
+              <li class="filter-list__item">
+                <a href="#" class="filter-card">
+                  <span class="filter-card__icon">
+                    <picture>
+                      <source type='image/webp' srcset='img/filter/img5.webp'>
+                      <img width='38' height='36' src='img/filter/img5.png' alt='image'>
+                    </picture>
+                  </span>
+                  <span class="filter-card__title">Home Services and Remodeling</span>
+                </a>
+              </li>
+              <li class="filter-list__item">
+                <a href="#" class="filter-card">
+                  <span class="filter-card__icon">
+                    <picture>
+                      <source type='image/webp' srcset='img/filter/img6.webp'>
+                      <img width='38' height='36' src='img/filter/img6.png' alt='image'>
+                    </picture>
+                  </span>
+                  <span class="filter-card__title">Stores</span>
+                </a>
+              </li>
+              <li class="filter-list__item">
+                <a href="#" class="filter-card">
+                  <span class="filter-card__icon">
+                    <picture>
+                      <source type='image/webp' srcset='img/filter/img7.webp'>
+                      <img width='38' height='36' src='img/filter/img7.png' alt='image'>
+                    </picture>
+                  </span>
+                  <span class="filter-card__title">Stores</span>
+                </a>
+              </li>
+              <li class="filter-list__item">
+                <a href="#" class="filter-card">
+                  <span class="filter-card__icon">
+                    <picture>
+                      <source type='image/webp' srcset='img/filter/img8.webp'>
+                      <img width='38' height='36' src='img/filter/img8.png' alt='image'>
+                    </picture>
+                  </span>
+                  <span class="filter-card__title">Other</span>
+                </a>
+              </li>
+              <li class="filter-list__item">
+                <a href="#" class="filter-card">
+                  <span class="filter-card__icon">
+                    <picture>
+                      <source type='image/webp' srcset='img/filter/img9.webp'>
+                      <img width='38' height='36' src='img/filter/img9.png' alt='image'>
+                    </picture>
+                  </span>
+                  <span class="filter-card__title">All Categories</span>
+                </a>
+              </li>
+            </ul>
+
+            <div class="first-section__categories">
+
+              <div class="categories">
+
+                <div class="categories__top">
+                  <span class="categories__title">Alphabetical index:</span>
+
+                  <ul class="categories__sublist">
+                    <li class="categories__item">
+                      <a href="#" class="categories__btn active">A</a>
+                    </li>
+                    <li class="categories__item">
+                      <a href="#" class="categories__btn">B</a>
+                    </li>
+                    <li class="categories__item">
+                      <a href="#" class="categories__btn">C</a>
+                    </li>
+                    <li class="categories__item">
+                      <a href="#" class="categories__btn">E</a>
+                    </li>
+                    <li class="categories__item">
+                      <a href="#" class="categories__btn">F</a>
+                    </li>
+                    <li class="categories__item">
+                      <a href="#" class="categories__btn">I</a>
+                    </li>
+                    <li class="categories__item">
+                      <a href="#" class="categories__btn">L</a>
+                    </li>
+                    <li class="categories__item">
+                      <a href="#" class="categories__btn">M</a>
+                    </li>
+                    <li class="categories__item">
+                      <a href="#" class="categories__btn">N</a>
+                    </li>
+                    <li class="categories__item">
+                      <a href="#" class="categories__btn">P</a>
+                    </li>
+                    <li class="categories__item">
+                      <a href="#" class="categories__btn">R</a>
+                    </li>
+                    <li class="categories__item">
+                      <a href="#" class="categories__btn">S</a>
+                    </li>
+                    <li class="categories__item">
+                      <a href="#" class="categories__btn">T</a>
+                    </li>
+                    <li class="categories__item">
+                      <a href="#" class="categories__btn">U</a>
+                    </li>
+                    <li class="categories__item">
+                      <a href="#" class="categories__btn">V</a>
+                    </li>
+                    <li class="categories__item">
+                      <a href="#" class="categories__btn">W</a>
+                    </li>
+                  </ul>
+                </div>
+                
+                <ul class="categories__list">
+                  <li class="categories__col">
+                    <a href="#" class="categories__link">Accounting and Taxes</a>
+                    <a href="#" class="categories__link">Alcohol and Drug Addiction Treatment</a>
+                    <a href="#" class="categories__link">Apparel</a>
+                    <a href="#" class="categories__link">Auto - Towing</a>
+                  </li>
+                  <li class="categories__col">
+                    <a href="#" class="categories__link">Adult Day Care Centers</a>
+                    <a href="#" class="categories__link">Alternative Medicine</a>
+                    <a href="#" class="categories__link">Appliances</a>
+                  </li>
+                  <li class="categories__col">
+                    <a href="#" class="categories__link">Advertising Agencies</a>
+                    <a href="#" class="categories__link">Ambulances</a>
+                    <a href="#" class="categories__link">Auto</a>
+                  </li>
+                  <li class="categories__col">
+                    <a href="#" class="categories__link">Air Conditioning and Heating</a>
+                    <a href="#" class="categories__link">Apartment Rental</a>
+                    <a href="#" class="categories__link">Auto - Repair & Parts</a>
+                  </li>
+                </ul>
+
+                <button class="yellow-btn">Browse all categories</button>
+              </div>
+
+
+
+            </div>
+          </div>
+          </div>
+        </div>
+    </section>
+
+  </main>
+  @include('partials/footer.html')
+  @include('partials/modals.html')
+</body>
+<script src="js/main.js"></script>
+
+</html>

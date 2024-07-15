@@ -1,0 +1,58 @@
+.main-nav{
+    display: flex;
+    align-items: center;
+    grid-gap: clamp(20px, 5.7143vw, 80px);
+    
+  
+
+
+    &__list{
+        display: flex;
+        align-items: center;
+
+        @include for-laptop{
+            grid-gap: clamp(20px, 5.7143vw, 80px); 
+        }
+
+        @include laptop{
+            grid-gap: clamp(50px, 4.839vw, 60px);
+        }
+    }
+
+    &__icon{
+        width: 16px;
+        height: 14px;
+        display: flex;
+        position: relative;
+        top: -2px;
+
+        svg{
+            fill: none;
+        }
+    }
+
+    &__item{
+        display: flex;
+
+        @include tablet{
+            &:not(.main-nav__item--mode){
+                display: none;
+            }
+        }
+    }
+
+    &__link{
+        font-weight: 600;
+        font-size: 15px;
+        text-transform: uppercase;
+        color: rgba(var(--cl-b),1.0);
+        display: inline-flex;
+        grid-gap: 8px;
+        transition: all .4s;
+        line-height: 100%;
+
+        &:hover{
+            color: rgba(var(--cl-e),1.0);
+        }
+    }
+}
