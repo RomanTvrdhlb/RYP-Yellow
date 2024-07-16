@@ -24,7 +24,6 @@ position: relative;
 
     &__link{
         font-weight: 600;
-        text-transform: uppercase;
         color: rgba(var(--cl-b),1.0);
         display: inline-flex;
         grid-gap: 10px;
@@ -37,10 +36,12 @@ position: relative;
         }
 
         @include for-mobile{
+            text-transform: uppercase;
             font-size: 15px;
         }
 
         @include mobile{
+            text-transform: capitalize;
             font-size: 14px;
         }
     }
