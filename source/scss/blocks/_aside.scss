@@ -14,7 +14,7 @@
     }
 
     &__list{
-        grid-gap: 10px;
+        grid-gap: 7px;
         display: flex;
         flex-direction: column;
     }
@@ -27,6 +27,17 @@
         .yellow-btn{
             width: fit-content;
             padding: 14px 39px;
+
+            @include small-tablet{
+                align-self: center;
+                @include for-mobile{
+                    width: 140px;
+                }
+            }
+
+            @include mobile{
+                width: 100%;
+            }
         }
     }
 

@@ -18,7 +18,6 @@ const checkIsSelectOpen = function (select) {
 
 const select = document.querySelectorAll("[data-select]");
 
-console.log(select);
 if (select.length) {
   select.forEach((item) => {
     const selectCurrent = item.querySelector(".select__current");

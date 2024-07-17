@@ -2,6 +2,7 @@ import {toggleCustomClass, fadeIn, fadeOut} from '../functions/customFunctions';
 
 const navBox = document.querySelector('.nav-box');
 const hideParent = document.querySelector('[data-hide-parent]');
+const dataHidden = document.querySelectorAll("[data-clip]");
 
 if(navBox){
     const btn = navBox.querySelector('.nav-box__btn');
@@ -59,4 +60,39 @@ if (hideParent) {
   
     toggleItems();
     window.addEventListener('resize', toggleItems);
+}
+
+if (dataHidden) {
+  dataHidden.forEach(function (item) {
+    const btn = item.querySelector("[data-clip-btn]");
+    const box = item.querySelector("[data-clip-item]");
+
+    const computedStyle = window.getComputedStyle(box);
+    const originalHeight = parseInt(
+      computedStyle.getPropertyValue("max-height")
+    );
+
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+      const isOpen = box.getAttribute("data-clip-item") === "true";
+
+      if (!isOpen) {
+        btn.innerHTML = 'Hide text';
+        box.style.maxHeight = box.scrollHeight + "px";
+        toggleCustomClass(btn, "active");
+        setTimeout(function () {
+          box.style.overflow = "auto";
+        }, 450);
+      } else {
+        btn.innerHTML = 'Show text';
+        box.style.maxHeight = originalHeight + "px";
+        toggleCustomClass(btn, "active");
+        box.style.overflow = "hidden";
+      }
+
+      box.setAttribute("data-clip-item", !isOpen);
+    });
+
+    box.style.transition = "max-height 0.2s linear";
+  });
 }

@@ -47,10 +47,11 @@
       height: clamp(37px, 2.7857vw, 39px);
   
       & > svg {
-        transition: transform .4s linear;
+        transition: transform .2s linear;
         flex-shrink: 0;
         width: 10px;
         aspect-ratio: 1;
+        fill: none;
   
         @include mobile {
           width: 10px;
