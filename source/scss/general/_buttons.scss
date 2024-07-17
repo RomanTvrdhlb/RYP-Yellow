@@ -42,6 +42,7 @@
   color: rgba(var(--cl-b),1.0);
   border-bottom: solid 1px var(--br-b);
   transition: all .3s;
+  width: fit-content;
 
   &:hover{
     border-color: transparent;

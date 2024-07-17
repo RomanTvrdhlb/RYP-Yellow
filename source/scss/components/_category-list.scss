@@ -1,0 +1,6 @@
+.category-list{
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(9px, 1.5vw, 21px);
+    width: 100%;
+}
