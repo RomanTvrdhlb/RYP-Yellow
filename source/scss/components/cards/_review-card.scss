@@ -1,0 +1,121 @@
+.review-card{
+    box-shadow: 0 2px 4px 0 rgba(0, 125, 173, 0.2);
+    background: rgba(var(--bg-a),1.0);
+    padding: clamp(20px, 1.7143vw, 24px) clamp(16px, 1.7143vw, 24px);
+    border-radius: 10px;
+    display: grid;
+    grid-gap: 10px;
+
+    @include for-mobile{
+        grid-template-columns: .79fr .21fr;
+    }
+
+    @include mobile{
+        grid-template-columns: auto 1fr;
+    }
+
+    &__right{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        grid-gap: 12px;
+        padding-top: clamp(4px, .6429vw, 9px);
+
+        .rating__star{
+            width: 16px;
+            height: 16px;
+        }
+
+        @include mobile{
+            display: contents;
+        }
+    }
+
+    .subtitle{
+        font-size: clamp(16px, 1.2857vw, 18px);
+
+        @include mobile{
+            grid-row: 1;
+            grid-column: 1;
+        }
+    }
+
+    p{
+        font-size: clamp(14px, 1.1429vw, 16px);
+        line-height: 118%;
+
+        @include for-mobile{
+            font-weight: 400;
+        }
+
+        @include mobile{
+            font-weight: 500;
+            grid-column: 1/-1;
+        }
+    }
+
+    &__bottom{
+        padding-left: 10px;
+        display: flex;
+        flex-direction: column;
+        grid-gap: 10px;
+
+        @include for-mobile{
+            margin-top: 14px;
+        }
+
+        @include mobile{
+            margin-top: 4px;
+            grid-column: 1/-1;
+        }
+    }
+
+    .rating{
+        @include mobile{
+            grid-row: 2;
+            grid-column: 1;
+            margin-bottom: 8px;
+        }
+
+        &__list{
+            padding-bottom: 0;
+        }
+    }
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 10px;
+
+        @include mobile{
+            display: contents;
+        }
+    }
+
+    &__date{
+        font-weight: 500;
+        font-size: clamp(14px, 1.1429vw, 16px);
+        color: rgba(var(--cl-f),1.0);
+        position: relative;
+
+        &::before{
+            position: absolute;
+            content: '';
+            width: 6px;
+            height: 6px;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -14px;
+            background-color: rgba(var(--cl-h),1.0);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        @include mobile{
+            grid-row: 1;
+            grid-column: 2;
+            justify-self: end;
+            align-self: center;
+        }
+    }
+}

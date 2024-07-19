@@ -1,0 +1,55 @@
+.about-list{
+    display: grid;
+    grid-gap: 16px 22px;
+
+    @include for-mobile{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile{
+        grid-template-columns: 100%;
+    }
+
+    .blog-card{
+
+        @include for-mobile{
+            height: clamp(280px, 46vw, 644px);
+        }
+
+        @include mobile{
+            height: clamp(280px, 86.333vw, 518px);
+        }
+    }
+
+    &--mode{
+
+        @include for-small-tablet{
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include small-tablet{
+            @include for-mobile{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                
+                .about-list__item{
+                    width: 48%;
+                }
+            }
+        }
+
+
+
+        .blog-card{
+
+            @include for-mobile{
+                height: clamp(280px, 33.5vw, 469px);
+            }
+    
+            @include mobile{
+                height: clamp(280px, 94.667vw, 568px);
+            }
+        }
+    }
+}

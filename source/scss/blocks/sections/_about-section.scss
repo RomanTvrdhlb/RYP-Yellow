@@ -1,0 +1,47 @@
+.about-section {
+  padding-bottom: clamp(50px, 6.4286vw, 90px);
+
+  @include for-mobile {
+    padding-top: 18px;
+  }
+
+  @include mobile {
+    padding-top: 20px;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(32px, 6.4286vw, 90px);
+  }
+
+  &__deskr {
+    border-top: 2px solid var(--br-f);
+    padding-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-gap: 16px;
+
+    p {
+      line-height: 110%;
+
+      @include mobile {
+        max-height: 54px;
+        overflow: hidden;
+      }
+    }
+
+    .hidden-btn {
+      @include for-mobile {
+        display: none;
+      }
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(22px, 2.5vw, 35px);
+  }
+}

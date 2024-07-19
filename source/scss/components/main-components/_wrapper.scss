@@ -1,0 +1,58 @@
+.main-wrapper{
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(20px, 4.2143vw, 59px);
+
+    .video{
+        margin-bottom: clamp(20px, 2.2857vw, 32px);
+    }
+
+  
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+       
+
+        &:last-child{
+            margin: 0;
+        }
+
+        @include for-mobile{
+            grid-gap: 21px;
+            margin-bottom: 7px;
+        }
+
+        @include mobile{
+            grid-gap: 30px;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 21px;
+    }
+  
+    &__about{
+        display: grid;
+        grid-gap: 20px;
+
+        @include for-tablet{
+            padding-right: clamp(10px, 1.5714vw, 22px);
+        }
+
+        @include for-small-tablet {
+            grid-template-columns: 1fr clamp(300px, 29vw, 406px);
+        }
+
+        @include small-tablet{
+            grid-template-columns: 100%;
+
+            .about-card{
+                order: 2;
+            }
+        }
+    }
+}

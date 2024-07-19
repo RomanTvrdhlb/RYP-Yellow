@@ -3,57 +3,33 @@ import vars from "../_vars";
 
 import {Navigation} from 'swiper/modules';
 
-// const {
-//   bannerSliders,
-// } = vars;
+const {
+  filterSliders,
+} = vars;
 
 
-// ratingSliders && ratingSliders.forEach(function(slider){
-//   const swiper = slider.querySelector('.swiper-container');
-//   const sliderPrev = slider.querySelector('.arrow-button--prev');
-//   const sliderNext = slider.querySelector('.arrow-button--next');
-//   let flag = true;
+filterSliders && filterSliders.forEach(function(slider){
+  const swiper = slider.querySelector('.swiper-container');
+  const sliderPrev = slider.querySelector('.swiper-button-prev');
+  const sliderNext = slider.querySelector('.swiper-button-next');
+  let flag = true;
 
-//   new Swiper(swiper, {
-//     modules: [Navigation],
-//     spaceBetween  : 30,
-//     slidesPerView : 3,
-//     speed         : 800,
-//     observer      : true,
-//     observeParents: true,
+  new Swiper(swiper, {
+    modules: [Navigation],
+    spaceBetween  : 20,
+    slidesPerView : 1,
+    speed         : 800,
+    observer      : true,
+    observeParents: true,
 
-//     navigation: {
-//       nextEl: sliderNext && sliderNext,
-//       prevEl: sliderPrev && sliderPrev,
-//     },
+    navigation: {
+      nextEl: sliderNext && sliderNext,
+      prevEl: sliderPrev && sliderPrev,
+    },
 
-//     breakpoints: {
-//       0: {
-//         slidesPerView: 'auto',
-//       },
-//       1024: {
-//         slidesPerView: 3,
-//       },
-//     },
-    
-//     on: {
-//       slideChangeTransitionStart: function () {
-//         if (window.innerWidth > 1240 && flag) {
-//           sliderPrev.style.display = 'flex';
-//           sliderPrev.style.marginRight = 'auto';
-//           flag = false;
-//         }
-//       }
-//     }
-//   });
-//   window.addEventListener('resize', function() {
-//     if (window.innerWidth <= 1240) {
-//       sliderPrev.style.marginRight = '0';
-//     } else {
-//       sliderPrev.style.marginRight = 'auto';
-//     }
-//   });
-// });
+  });
+
+});
 
 
 let swipers = [];

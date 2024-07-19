@@ -16,7 +16,48 @@
     background: rgba(var(--bg-d),.75);
     transform: translateY(2px);
   }
+}
 
+.black-btn {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 14px;
+  color: rgba(var(--cl-a),1.0);
+  border-radius: 4px;
+  padding: 14px 30px;
+  height: 45px;
+  background: rgba(var(--bg-b),1.0);
+  transition: all .1s ease-in;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover{
+    background: rgba(var(--bg-d),1);
+    transform: translateY(2px);
+  }
+}
+
+.transparent-btn {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 14px;
+  color: rgba(var(--cl-c),1.0);
+  border-radius: 4px;
+  padding: 14px 30px;
+  height: 45px;
+  border: 1px solid #000;
+  background: rgba(var(--bg-a),1.0);
+  transition: all .1s ease-in;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover{
+    color: rgba(var(--cl-h),1.0);
+    border-color: var(--br-b);
+    transform: translateY(2px);
+  }
 }
 
 .filter-btn{
@@ -46,6 +87,31 @@
 
   &:hover{
     border-color: transparent;
+  }
+}
+
+.edit-btn{
+  display: flex;
+  align-items: center;
+  grid-gap: 10px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 14px;
+  color: rgba(var(--cl-c),1.0);
+  transition: all .3s;
+
+  img,svg{
+    transition: all .3s;
+    display: flex;
+    margin-top: -2px;
+  }
+
+  &:hover{
+    color: rgba(var(--cl-e),1.0);
+
+    img,svg{
+      transform: scale(1.05);
+    }
   }
 }
 

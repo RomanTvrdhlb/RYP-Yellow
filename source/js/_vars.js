@@ -10,6 +10,7 @@ export default {
   mobileMenu: document.querySelector(".mobile"),
   overlay: document.querySelector("[data-overlay]"),
   bannerSliders: document.querySelectorAll(".banner-slider"),
+  filterSliders: document.querySelectorAll(".filter-slider"),
   modals: [...document.querySelectorAll('[data-popup]')],
   modalsButton: [...document.querySelectorAll('[data-btn-modal]')],
   innerButtonModal: [...document.querySelectorAll('[data-btn-inner]')],

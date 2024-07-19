@@ -1,21 +1,30 @@
 // ----------------- MAIN COMPONENTS -----------------
-// @import "../components/main-components/main-form.scss";
 @import "../components/main-components/main-nav.scss";
 @import "../components/main-components/nav-box.scss";
 @import "../components/main-components/breadcrumbs.scss";
+@import "../components/main-components/main-top.scss";
+@import "../components/main-components/wrapper.scss";
+@import "../components/main-components/main-form.scss";
 
 // ----------------- BLOCK COMPONENTS -----------------
-// @import "../components/history-list.scss";
-// @import "../components/invite.scss";
-// @import "../components/info-box.scss";
 @import "../components/filter-list.scss";
 @import "../components/category-list.scss";
 @import "../components/banner-slider.scss";
+@import "../components/filter-slider.scss";
+@import "../components/reviews-list.scss";
+@import "../components/contact.scss";
+@import "../components/about-list.scss";
 
 // ----------------- CARD COMPONENTS -----------------
 @import "../components/cards/filter-card.scss";
 @import "../components/cards/category-card.scss";
 @import "../components/cards/banner-card.scss";
+@import "../components/cards/info-card.scss";
+@import "../components/cards/card.scss";
+@import "../components/cards/about-card.scss";
+@import "../components/cards/review-card.scss";
+@import "../components/cards/location-card.scss";
+@import "../components/cards/blog-card.scss";
 
 
 

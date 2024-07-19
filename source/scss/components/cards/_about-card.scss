@@ -1,0 +1,49 @@
+.about-card{
+    box-shadow: 0 2px 4px 0 rgba(0, 125, 173, 0.2);
+    background: rgba(var(--bg-a),1.0);
+    padding: clamp(12px, 1.7143vw, 24px) clamp(19px, 1.7857vw, 25px);
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+
+    @include for-mobile{
+        grid-gap: 20px;
+    }
+
+    @include mobile{
+        grid-gap: 14px;
+    }
+    
+    &__top{
+        display: flex;
+        flex-direction: column;
+
+        @include for-mobile{
+            grid-gap: 10px;
+        }
+
+        @include mobile{
+            grid-gap: 12px;
+        }
+
+        .rating{
+            @include for-mobile{
+                margin-bottom: 4px;
+            }
+    
+            @include mobile{
+               margin-bottom: 2px;
+            }
+        }
+
+        p{
+            line-height: 118%;
+        }
+    }
+
+    &__title{
+        font-weight: 700;
+        font-size: clamp(16px, 1.2857vw, 18px);
+        color: rgba(var(--cl-c),1.0);
+    }
+}
