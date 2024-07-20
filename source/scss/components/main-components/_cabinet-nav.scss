@@ -1,0 +1,56 @@
+.cabinet-nav{
+    padding: clamp(18px, 1.8571vw, 26px) clamp(14px, 1.8571vw, 26px);
+    display: flex;
+    flex-direction: column;
+    grid-gap: 20px;
+    background-color: rgba(var(--bg-c),1.0);
+    border-radius: 10px;
+    height: fit-content;
+
+    &__btn{
+        border-bottom: 1px solid var(--br-d);
+        padding: 10px 0px 10px 12px;
+        width: 100%;
+        height: clamp(37px, 2.7857vw, 39px);
+        display: flex;
+        align-items: center;
+        grid-gap: 10px;
+        font-weight: 500;
+        font-size: clamp(14px, 1.1429vw, 16px);
+        color: rgba(var(--cl-c),1.0);
+        transition: all .3s;
+
+        &.active{
+            color: rgba(var(--cl-a),1.0);
+            background-color: rgba(var(--bg-f),1.0);
+            .cabinet-nav__icon svg{
+                fill:  rgba(var(--cl-a),1.0);
+            }
+
+            &:hover{
+                background-color: rgba(var(--bg-f),.7);
+            }
+        }
+
+        &:hover{
+            background-color: rgba(var(--bg-e),.4);
+        }
+    }
+
+    &__icon{
+        width: 16px;
+        height: 16px;
+        display: flex;
+
+        svg{
+            transition: all .3s;
+            fill:  rgba(var(--cl-h),1.0);
+        }
+
+        &--mode{
+            svg{
+                fill: rgba(var(--bg-e),1.0);
+            }
+        }
+    }
+}

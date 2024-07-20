@@ -3,6 +3,7 @@ import {toggleCustomClass, fadeIn, fadeOut} from '../functions/customFunctions';
 const navBox = document.querySelector('.nav-box');
 const hideParent = document.querySelector('[data-hide-parent]');
 const dataHidden = document.querySelectorAll("[data-clip]");
+const warnCards = document.querySelectorAll('.warn-card');
 
 if(navBox){
     const btn = navBox.querySelector('.nav-box__btn');
@@ -95,4 +96,22 @@ if (dataHidden) {
 
     box.style.transition = "max-height 0.2s linear";
   });
+}
+
+if(warnCards){
+  warnCards.forEach(function(card){
+    const closeBtn = card.querySelector('.warn-card__close');
+    const item = card.parentNode;
+    const parent = item.parentNode;
+
+    closeBtn && closeBtn.addEventListener('click', function(e){
+      e.preventDefault();
+      item.removeChild(card);
+      item.remove();
+
+      if (parent.children.length === 0) {
+        parent.remove();
+      }
+    })
+  })
 }

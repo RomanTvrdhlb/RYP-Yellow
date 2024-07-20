@@ -150,4 +150,30 @@
         align-items: center;
         padding: 5px clamp(28px, 2.2857vw, 32px) 5px 0;
     }
+
+    &--info{
+        height: fit-content;
+        min-height: 177px;
+        padding: clamp(17px, 1.4286vw, 20px);
+        justify-content: center;
+
+        .banner-card{
+            &__title{
+                padding: 0;
+                background-color: transparent;
+                color: rgba(var(--cl-a),1.0);
+            }
+
+            &__bg{
+
+                img,picture{
+                    @include tablet{
+                        @include for-small-tablet{
+                            object-position: 50% 90%;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

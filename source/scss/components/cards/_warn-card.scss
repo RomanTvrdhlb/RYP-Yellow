@@ -1,0 +1,48 @@
+.warn-card{
+    box-shadow: 0 2px 4px 0 rgba(0, 125, 173, 0.2);
+    background: rgba(var(--bg-a),1.0);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 13px;
+    position: relative;
+    padding:20px clamp(23px, 2.5vw, 35px) 22px clamp(14px, 1.4286vw, 20px);
+
+    &__close{
+        width: 18px;
+        height: 18px;
+        display: flex;
+        position: absolute;
+        top: clamp(10px, 1.4286vw, 20px);
+        right: clamp(10px, 1.4286vw, 20px);
+
+        @include laptop{
+            @include for-tablet{
+                right: 10px;
+            }
+        }
+
+        svg{
+            stroke: rgba(var(--cl-g),1.0);
+            transition: all .3s;
+        }
+
+        &:hover{
+            svg{
+                stroke: rgba(var(--cl-f),1.0);
+            }
+        }
+    }
+
+    &__title{
+        font-weight: 700;
+        font-size: 16px;
+        color: rgba(var(--cl-c),1.0);
+        max-width: 95%;
+    }
+
+    p{
+        font-weight: 500;
+        font-size: 14px;
+    }
+}

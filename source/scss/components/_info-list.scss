@@ -1,0 +1,28 @@
+.info-list{
+    grid-gap: clamp(10px, 1.4286vw, 20px);
+
+    @include for-tablet{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include tablet{
+        display: flex;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+
+        &::-webkit-scrollbar{
+            display: none;
+        }
+
+        width: calc(100% + (var(--container-offset) * 2));
+        margin-left: calc(var(--container-offset) * -1);
+        padding: 1px var(--container-offset) 2px;
+    }
+    
+    &__item{
+        @include tablet{
+            min-width: 276px;
+        }
+    }
+}
