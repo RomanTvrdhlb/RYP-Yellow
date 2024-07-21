@@ -4,12 +4,14 @@
     position: relative;
     z-index: 1;
 
-    .black-btn{
+    button{
         position: absolute;
         bottom: clamp(40px, 6.4286vw, 90px);
         left: 50%;
-        transform: translateX(-50%);
-        z-index: 5;
+        transform: translateX(-50%) !important;
+        z-index: 10;
+        width: fit-content;
+        white-space: nowrap;
     }
 
     &__image{

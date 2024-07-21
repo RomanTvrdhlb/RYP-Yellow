@@ -23,7 +23,7 @@
             </li>
           </ul>
 
-          <div class="cabinet-section__content">
+          <div class="cabinet-section__wrapp">
             <h1 class="cabinet-section__title pretitle">Profile</h1>
 
             <aside class="cabinet-nav">
@@ -83,16 +83,27 @@
                 </ul>
             </aside>
 
-            <div class="cabinet-section__inner">
+          
            
-              <form class="cabinet-form main-form">
-                <span class="main-form__title main-form__title--mode">Personal information</span>
+              <form class="profile-form main-form">
+                <div class="main-form__box">
+
+                  <div class="main-form__top">
+                    <span class="main-form__title subtitle">Personal information</span>
+
+                    <div class="main-form__status">
+                      <span class="main-form__subtitle">Moderation status:</span>
+                      <span class="main-form__status-text">changes made</span>
+                    </div>
+                  </div>
+                
                 <ul class="main-form__list">
                   <li class="main-form__item">
-                    <label for="full_name" class="main-form__label">
-                      <input type="text" name="full_name" id="full_name" class="main-form__input" placeholder="Full name">
+                    <label for="company" class="main-form__label">
+                      <input type="text" name="company" id="company" class="main-form__input" placeholder="Company Name">
                     </label>
                   </li>
+                 
                   <li class="main-form__item">
                     <label for="phone" class="main-form__label">
                       <input type="tel" name="phone" id="phone" class="main-form__input" placeholder="Phone">
@@ -104,34 +115,207 @@
                     </label>
                   </li>
                   <li class="main-form__item">
-                    <label for="pass" class="main-form__label">
-                      <input type="text" name="pass" id="pass" class="main-form__input" placeholder="Password">
-                    </label>
-                  </li>
-                  <li class="main-form__item">
-                    <label for="pass_2" class="main-form__label">
-                      <input type="text" name="pass_2" id="pass_2" class="main-form__input" placeholder="Repeat Password">
+                    <label for="mess" class="main-form__label">
+                      <textarea name="mess" id="mess" class="main-form__area main-form__area--mode" placeholder="Describe your business"></textarea>
                     </label>
                   </li>
                 </ul>
-                  <button class="yellow-btn">Save</button>
+
+                <ul class="services-list">
+                  <li class="services-list__item">
+                    <div class="services-card">
+                      <span class="services-card__title">car repair</span>
+                      <button class="services-card__close">
+                        <svg width='12' height='12'>
+                          <use href='img/sprite/sprite.svg#close'></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </li>
+                  <li class="services-list__item">
+                    <div class="services-card">
+                      <span class="services-card__title">car repair</span>
+                      <button class="services-card__close">
+                        <svg width='12' height='12'>
+                          <use href='img/sprite/sprite.svg#close'></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </li>
+                  <li class="services-list__item">
+                    <div class="services-card">
+                      <span class="services-card__title">car repair</span>
+                      <button class="services-card__close">
+                        <svg width='12' height='12'>
+                          <use href='img/sprite/sprite.svg#close'></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </li>
+                  <li class="services-list__item">
+                    <div class="services-card">
+                      <span class="services-card__title">car repair</span>
+                      <button class="services-card__close">
+                        <svg width='12' height='12'>
+                          <use href='img/sprite/sprite.svg#close'></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </li>
+                </ul>
+
+                <div class="main-form__add">
+                  <label for="servise" class="main-form__label">
+                    <input type="text" name="servise" id="servise" class="main-form__input" placeholder="Servise name">
+                  </label>
+                  <button class="hidden-btn">Add service</button>
+                </div>
+
+                <div class="main-form__services">
+                    <div class="service-card">
+                      <div class="service-card__box">
+                        <span class="service-card__title">24/7 Emergency Locksmith</span>
+
+                        <div class="service-card__adress">
+                          <span class="service-card__text">NJ</span>
+                          <button class="geo-btn">
+                            <svg width='14' height='14'>
+                              <use href='img/sprite/sprite.svg#geo2'></use>
+                            </svg>
+                            <span class="geo-btn__text">Edit</span>
+                          </button>
+                        </div>
+                        <button class="edit-btn">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#edit'></use>
+                          </svg>
+                        </button>
+                      </div>
+
+                      <div class="service-card__wrapp">
+                        <ul class="service-card__list">
+                          <li class="service-card__item">
+                            <label for="company_2" class="service-card__label">
+                              <input type="text" name="company_2" id="company_2" class="service-card__input" placeholder="Company Name">
+                            </label>
+                          </li>
+                          <li class="service-card__item">
+                            <label for="adress_2" class="service-card__label">
+                              <input type="text" name="adress_2" id="company_2" class="service-card__input" placeholder="Adress">
+                            </label>
+                          </li>
+                          <li class="service-card__item">
+                            <label for="phone_2" class="service-card__label">
+                              <input type="tel" name="phone_2" id="phone_2" class="service-card__input" placeholder="Phone">
+                            </label>
+                          </li>
+                          <li class="service-card__item">
+                            <label for="email_2" class="service-card__label">
+                              <input type="email" name="email_2" id="email_2" class="service-card__input" placeholder="E-mail">
+                            </label>
+                          </li>
+                        </ul>
+
+                        <div class="service-card__map">
+                          <picture>
+                            <source type='image/webp' srcset='img/cabinet/map.webp'>
+                            <img width='100' height='100' src='img/cabinet/map.png' alt='image'>
+                          </picture>
+                        </div>
+
+                        <div class="service-card__btns">
+                          <button class="yellow-btn">Save</button>
+                          <button class="transparent-btn">Cansel</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="service-card">
+                      <div class="service-card__box">
+                        <span class="service-card__title">24/7 Emergency Locksmith</span>
+
+                        <div class="service-card__adress">
+                          <span class="service-card__text">1713 Old York Road Abington PA 19001</span>
+                          <button class="geo-btn">
+                            <svg width='14' height='14'>
+                              <use href='img/sprite/sprite.svg#geo2'></use>
+                            </svg>
+                            <span class="geo-btn__text">Edit</span>
+                          </button>
+                        </div>
+                        <button class="edit-btn">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#edit'></use>
+                          </svg>
+                        </button>
+                      </div>
+
+                      <div class="service-card__wrapp">
+                        <ul class="service-card__list">
+                          <li class="service-card__item">
+                            <label for="company_2" class="service-card__label">
+                              <input type="text" name="company_2" id="company_2" class="service-card__input" placeholder="Company Name">
+                            </label>
+                          </li>
+                          <li class="service-card__item">
+                            <label for="adress_2" class="service-card__label">
+                              <input type="text" name="adress_2" id="company_2" class="service-card__input" placeholder="Adress">
+                            </label>
+                          </li>
+                          <li class="service-card__item">
+                            <label for="phone_2" class="service-card__label">
+                              <input type="tel" name="phone_2" id="phone_2" class="service-card__input" placeholder="Phone">
+                            </label>
+                          </li>
+                          <li class="service-card__item">
+                            <label for="email_2" class="service-card__label">
+                              <input type="email" name="email_2" id="email_2" class="service-card__input" placeholder="E-mail">
+                            </label>
+                          </li>
+                        </ul>
+
+                        <div class="service-card__map">
+                          <picture>
+                            <source type='image/webp' srcset='img/cabinet/map.webp'>
+                            <img width='100' height='100' src='img/cabinet/map.png' alt='image'>
+                          </picture>
+                        </div>
+
+                        <div class="service-card__btns">
+                          <button class="yellow-btn">Save</button>
+                          <button class="transparent-btn">Cansel</button>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="hidden-btn">Add new adress</button>
+                </div>
+
+
+                  <button class="yellow-btn">Send for moderation</button>
+                </div>
+                <div class="download">
+                  <span class="subtitle">Download image</span>
+    
+                  <div class="download__image">
+                    <img width="333" height="376" src="./img/cabinet/img1.png" alt="image">
+                  </div>
+    
+                  <div class="download__bottom">
+                    <p>Please add a photo in .jpg, .png, .webp format 
+                      with a size of 288*318 pixels</p>
+                    <label for="fileInput" class="download-btn">
+                      <svg width='20' height='20'>
+                        <use href='img/sprite/sprite.svg#download'></use>
+                      </svg>
+                      Download / Change photo
+                    </label>
+                  </div>
+    
+                  <input class="download__input" type="file" id="fileInput" accept="image/*">
+                </div>
               </form>
 
-            </div>
-
-            <div class="cabinet-section__banner">
-              <div class="banner-card banner-card--info">
-                <div class="banner-card__bg">
-                  <picture>
-                    <source type='image/webp' srcset='img/cabinet/banner.webp'>
-                    <img width='335' height='199' src='img/cabinet/banner.png' alt='image'>
-                  </picture>
-                </div>
-                <span class="banner-card__title">Looking<br>
-                  to advertise<br> 
-                  for your business?</span>
-              </div>
-            </div>
+              
+           
           </div>
 
         </div>

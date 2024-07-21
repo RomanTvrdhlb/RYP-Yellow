@@ -90,6 +90,29 @@
   }
 }
 
+.geo-btn{
+  display: flex;
+  align-items: center;
+  grid-gap: 4px;
+
+  &:hover{
+    .geo-btn__text{
+      border-color: transparent;
+    }
+  }
+
+  &__text{
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+    color: rgba(var(--cl-b),1.0);
+    border-bottom: solid 1px var(--br-b);
+    transition: all .3s;
+    width: fit-content;
+  }
+}
+
 .edit-btn{
   display: flex;
   align-items: center;
@@ -104,6 +127,7 @@
     transition: all .3s;
     display: flex;
     margin-top: -2px;
+    pointer-events: none;
   }
 
   &:hover{
@@ -115,4 +139,24 @@
   }
 }
 
+.download-btn{
+  border: 1px solid var(--br-g);
+  border-radius: 4px;
+  padding: 14px clamp(15px, 2.1429vw, 30px);
+  height: 48px;
+  width: fit-content;
+  grid-gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 14px;
+  color: rgba(var(--cl-c),1.0);
+  transition: all .3s;
+  cursor: pointer;
 
+  &:hover{
+    border-color: var(--br-b);
+    color: rgba(var(--cl-h),1.0);
+  }
+}

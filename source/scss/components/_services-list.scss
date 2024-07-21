@@ -1,0 +1,17 @@
+.services-list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-gap: 14px;
+
+    @include mobile{
+        flex-wrap: wrap;
+    }
+
+    &__item{
+
+        @include ios{
+            width: 40%;
+        }
+    }
+}

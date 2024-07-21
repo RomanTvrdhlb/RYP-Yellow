@@ -128,6 +128,10 @@
                 font-weight: 500;
             }
         }
+
+        &--mode{
+            min-height: 100px;
+        }
     }
 
     &__input{
@@ -207,11 +211,129 @@
         }
     }
 
+    &__subtitle{
+        font-weight: 700;
+        font-size: clamp(16px, 1.2857vw, 18px);
+        color: rgba(var(--cl-c),1.0);
+        line-height: 118%;
+    }
+
+    &__status{
+        display: flex;
+        align-items: center;
+        grid-gap: clamp(10px, 1.2857vw, 18px);
+
+        &-text{
+            display: inline-flex;
+            align-items: center;
+            grid-gap: clamp(7px, .5714vw, 8px);
+            font-weight: 500;
+            font-size: clamp(14px, 1.1429vw, 16px);
+            color: rgba(var(--cl-f),1.0);
+            line-height: 100%;
+
+            &::before{
+                content: '';
+                display: block;
+                width: clamp(5px, .4286vw, 6px);
+                height: clamp(5px, .4286vw, 6px);
+                top: 1px;
+                position: relative;
+                background-color: rgba(var(--bg-g),1.0);
+                border-radius: 100%;
+            }
+        }
+
+        &.mode{
+            .main-form__status-text::before{
+                background-color: rgba(var(--bg-h),1.0);
+            }
+        }
+
+        &.fail{
+            .main-form__status-text::before{
+                background-color: rgba(var(--bg-i),1.0);
+            }
+        }
+
+        @include mobile{
+            width: 100%;
+            justify-content: space-between;
+        }
+    }
+
+    &__add{
+        display: flex;
+        align-items: center;
+        grid-gap: 20px;
+
+        @include ios{
+            justify-content: space-between;
+        }
+
+        .main-form__label{
+            width: clamp(182px, 15.5vw, 217px);
+        }
+    }
+
+    &__top{
+        display: flex;
+        align-items: center;
+        grid-gap: 18px;
+
+        .main-form__title{
+            padding: 0;
+            margin: 0;
+        }
+
+        @include for-mobile{
+            justify-content: space-between;
+        }
+
+        @include mobile{
+            flex-direction: column;
+        }
+    }
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        grid-gap: clamp(16px, 1.4286vw, 20px);
+    }
+
+    &__services{
+        display: flex;
+        flex-direction: column;
+
+        @include for-mobile{
+            grid-gap: 20px;
+        }
+
+        @include mobile{
+            grid-gap: 9px;
+
+            .hidden-btn{
+                margin-top: 7px;
+            }
+        }
+    }
+
     &__list{
         width: 100%;
         display: flex;
         flex-direction: column;
         grid-gap: clamp(14px, 1.4286vw, 20px);
+    }
+
+    &__choice{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        grid-gap: clamp(16px, 1.4286vw, 20px) clamp(16px, 1.7857vw, 25px);
+
+        .select:first-child{
+            grid-column: 1/-1;
+        }
     }
 
     &--mode{
@@ -225,13 +347,94 @@
     }
 }
 
+.info-form{
+    box-shadow: 0 2px 4px 0 rgba(0, 125, 173, 0.2);
+    background: rgba(var(--bg-a),1.0);
+    border-radius: 10px;
+    padding: clamp(26px, 3.5714vw, 50px) clamp(10px, 4.2857vw, 60px);
+    align-items: center;
+    grid-gap: clamp(18px, 1.7143vw, 24px);
+
+
+    @include for-tablet{
+        max-width: 690px;
+    }
+
+    @include tablet{
+        max-width: 100%;
+    }
+
+    .yellow-btn{
+        padding: 14px 77px;
+
+        @include mobile{
+            margin-top: 2px;
+        }  
+    }
+
+    .main-form{
+        &__title{
+            padding: 0;
+            margin: 0;
+            font-size: clamp(18px, 2.1429vw, 30px);
+        }
+
+        &__list{
+            @include for-mobile{
+                margin-top: 6px;
+            }
+
+            grid-gap: clamp(16px, 1.4286vw, 20px);
+        }
+    }
+}
+
+.profile-form{
+    display: grid;
+    grid-gap: clamp(20px, 2.5714vw, 36px) clamp(15px, 1.4286vw, 20px);
+    max-width: 100%;
+    @include for-tablet {
+        grid-template-columns: 1fr clamp(
+            250px,
+            23.9286vw,
+            335px
+          );
+    }
+
+    @include tablet{
+        grid-template-columns: 100%;
+    }
+   
+    .main-form{
+
+        &__top{
+            @include mobile{
+                margin-bottom: 6px;
+            }
+        }
+
+        &__list{
+            grid-gap: clamp(16px, 1.4286vw, 20px);
+        }
+
+        &__title{
+            font-size: clamp(20px, 2.1429vw, 30px);
+        }
+    }
+
+    .download{
+        @include tablet{
+            order: -1;
+        }
+    }
+}
+
 .cabinet-form{
     box-shadow: 0 2px 4px 0 rgba(0, 125, 173, 0.2);
     background: rgba(var(--bg-a),1.0);
     border-radius: 10px;
     max-width: 100%;
     align-items: center;
-
     grid-gap: clamp(18px, 2.5vw, 35px);
 
     @include for-small-tablet{
@@ -274,6 +477,44 @@
         padding: 14px 77px;
 
         @include mobile{
+            width: 100%;
+        }
+    }
+}
+
+.advertising-form{
+    display: grid;
+    grid-gap: clamp(20px, 2.5714vw, 36px) clamp(15px, 1.4286vw, 20px);
+    max-width: 100%;
+    @include for-tablet {
+        grid-template-columns: 1fr clamp(
+            250px,
+            23.9286vw,
+            335px
+          );
+    }
+
+    @include tablet{
+        grid-template-columns: 100%;
+    }
+
+    .main-form{
+
+        &__title{
+            font-size: clamp(19px, 2.1429vw, 30px);
+            padding: 0;
+        }
+
+        &__box{
+            grid-gap: 30px;
+        }
+
+        &__inner{
+            border-radius: 10px;
+            box-shadow: 0 2px 4px 0 rgba(0, 125, 173, 0.2);
+            background: rgba(var(--bg-a),1.0);
+            padding: 0 clamp(10px, 1vw, 14px) clamp(30px, 3.5714vw, 50px) clamp(10px, 2vw, 28px);
+            flex-direction: column;
             width: 100%;
         }
     }

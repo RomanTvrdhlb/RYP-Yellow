@@ -1,0 +1,54 @@
+.main-advert{
+    display: grid;
+    grid-gap: 12px clamp(16px, 1.7857vw, 25px);
+    width: 100%;
+
+    @include for-mobile{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile{
+        grid-template-columns: 100%;
+    }
+
+    &__text{
+        font-weight: 400;
+        font-size: clamp(13px, 1.1429vw, 16px);
+        color: rgba(var(--cl-f),1.0);
+        display: inline-flex;
+        align-items: center;
+      
+
+        @include for-mobile{
+            font-weight: 400;
+            grid-gap: 6px;
+        }
+
+        @include mobile{
+            grid-gap: 7px;
+            font-weight: 500;
+        }
+
+        svg,img{
+            @include for-mobile{
+                margin-right: 4px;
+            }
+        }
+
+        b{
+            @include mobile{
+                margin-left: 3px;
+            }
+        }
+    }
+
+    &__value{
+        font-weight: 700;
+        font-size: clamp(17px, 1.4286vw, 20px);
+        color: rgba(var(--cl-c),1.0);
+
+        b{
+            color: rgba(var(--cl-h),1.0);
+        }
+    }
+}

@@ -1,0 +1,102 @@
+.download{
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(15px, 1.4286vw, 20px);
+    align-items: center;
+
+    &__image{
+        display: flex;
+        border-radius: 3px;
+        overflow: hidden;
+
+        img,picture{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @include for-tablet{
+            width: 100%;
+            height: Min(26.8571vw, 376px);
+        }
+
+        @include tablet{
+            width: clamp(299px, 32.52vw, 333px);
+            height: clamp(338px, 36.719vw, 376px);
+        }
+
+        @include for-small-tablet{
+            margin-bottom: 2px;
+        }
+
+        @include small-tablet{
+            margin-top: 3px;
+        }
+
+    }
+
+    p{
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: clamp(14px, 1.0714vw, 15px);
+        color: rgba(var(--cl-f),1.0);
+    }
+
+    &__bottom{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include for-laptop{
+            margin-right: 10px;
+        }
+       
+        @include for-small-tablet{
+            grid-gap: 12px;
+        }
+
+        @include small-tablet{
+            grid-gap: 24px;
+        }
+    
+      
+    }
+
+    &__input{
+        display: none;
+    }
+
+    &__box{
+        display: flex;
+        align-items: center;
+        grid-gap: clamp(12px, .9286vw, 13px);
+    }
+
+    .download-btn{
+        @include mobile{
+            width: 100%;
+        }
+    }
+
+    &--mode{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: clamp(16px, 1.7857vw, 25px);
+
+        .download{
+
+            &__image{
+                border: 1px solid var(--br-g);
+                border-radius: 6px;
+                width: clamp(60px, 5.7143vw, 80px);
+                height: clamp(60px, 5.7143vw, 80px);
+                flex-shrink: 0;
+               
+                img,picture{
+                    border-radius: inherit;
+                }
+            }
+        }
+    }
+}

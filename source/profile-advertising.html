@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+  @include('partials/header.html')
+
+  <main>
+
+    <section class="cabinet-section">
+      <div class="container">
+        <div class="cabinet-section__box">
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs__item">
+              <a href="index.html" class="breadcrumbs__link">
+                <svg width='16' height='14'>
+                  <use href='img/sprite/sprite.svg#home2'></use>
+                </svg>
+              </a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a href="#" class="breadcrumbs__link">Profile</a>
+            </li>
+          </ul>
+
+          <div class="cabinet-section__wrapp">
+            <h1 class="cabinet-section__title pretitle">Profile</h1>
+
+            <aside class="cabinet-nav">
+                <span class="subtitle subtitle--mode">John Benet</span>
+
+                <ul class="cabinet-nav__list">
+                  <li class="cabinet-nav__item">
+                    <button class="cabinet-nav__btn">
+                      <span class="cabinet-nav__icon">
+                        <svg width='16' height='16'>
+                          <use href='img/sprite/sprite.svg#user2'></use>
+                        </svg>
+                      </span>
+                      Personal information
+                    </button>
+                  </li>
+                  <li class="cabinet-nav__item">
+                    <button class="cabinet-nav__btn active">
+                      <span class="cabinet-nav__icon">
+                        <svg width='16' height='16'>
+                          <use href='img/sprite/sprite.svg#business'></use>
+                        </svg>
+                      </span>
+                      My business
+                    </button>
+                  </li>
+                  <li class="cabinet-nav__item">
+                    <button class="cabinet-nav__btn">
+                      <span class="cabinet-nav__icon">
+                        <svg width='16' height='16'>
+                          <use href='img/sprite/sprite.svg#web'></use>
+                        </svg>
+                      </span>
+                      Web advertising
+                    </button>
+                  </li>
+                  <li class="cabinet-nav__item">
+                    <button class="cabinet-nav__btn">
+                      <span class="cabinet-nav__icon">
+                        <svg width='16' height='16'>
+                          <use href='img/sprite/sprite.svg#print'></use>
+                        </svg>
+                      </span>
+                      Print Publication
+                    </button>
+                  </li>
+                  <li class="cabinet-nav__item">
+                    <button class="cabinet-nav__btn">
+                      <span class="cabinet-nav__icon cabinet-nav__icon--mode">
+                        <svg width='16' height='16'>
+                          <use href='img/sprite/sprite.svg#out'></use>
+                        </svg>
+                      </span>
+                      Log-out
+                    </button>
+                  </li>
+                </ul>
+            </aside>
+
+      
+              <form class="advertising-form main-form">
+                <div class="main-form__box">
+                <span class="main-form__title">Business advertising</span>
+
+                <div class="main-form__inner">
+
+                <ul class="form-nav">
+                  <li class="form-nav__item">
+                    <button class="form-nav__btn">Auto</button>
+                  </li>
+                  <li class="form-nav__item">
+                    <button class="form-nav__btn">Proffecional 
+                      service</button>
+                  </li>
+                  <li class="form-nav__item">
+                    <button class="form-nav__btn form-nav__btn--add active">
+                      <svg width='18' height='18'>
+                        <use href='img/sprite/sprite.svg#plus'></use>
+                      </svg>
+                      Add category</button>
+                  </li>
+                </ul>
+
+                <div class="main-form__choice">
+                  <div class="select" data-select>
+                    <div class="select__header">
+                        <input type="hidden" class="select__input input-select" name="category"
+                            value="1">
+                        <span class="select__current" data-id="1">
+                          Auto
+                        </span>
+                        <svg class="select__current-icon" width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#arrow-b'></use>
+                        </svg>
+                    </div>
+                    <div class="select__body">
+                        <ul class="select__list">
+                            <li class="select__option" data-id="1" data-type="option">
+                              Auto1
+                            </li>
+                            <li class="select__option" data-id="2" data-type="option">
+                              Auto2
+                            </li>
+                            <li class="select__option" data-id="3" data-type="option">
+                              Auto3
+                            </li>
+                        </ul>
+                    </div>
+                  </div>
+                  <div class="select" data-select>
+                    <div class="select__header">
+                        <input type="hidden" class="select__input input-select" name="month"
+                            value="3">
+                        <span class="select__current" data-id="3">
+                          August
+                        </span>
+                        <svg class="select__current-icon" width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#arrow-b'></use>
+                        </svg>
+                    </div>
+                    <div class="select__body">
+                        <ul class="select__list">
+                            <li class="select__option" data-id="1" data-type="option">
+                              June
+                            </li>
+                            <li class="select__option" data-id="2" data-type="option">
+                              July
+                            </li>
+                            <li class="select__option" data-id="3" data-type="option">
+                              August
+                            </li>
+                            <li class="select__option" data-id="4" data-type="option">
+                              September
+                            </li>
+                            <li class="select__option" data-id="5" data-type="option">
+                              November
+                            </li>
+                        </ul>
+                    </div>
+                  </div>
+                  <div class="select" data-select>
+                    <div class="select__header">
+                        <input type="hidden" class="select__input input-select" name="month_end"
+                            value="4">
+                        <span class="select__current" data-id="4">
+                          September
+                        </span>
+                        <svg class="select__current-icon" width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#arrow-b'></use>
+                        </svg>
+                    </div>
+                    <div class="select__body">
+                        <ul class="select__list">
+                            <li class="select__option" data-id="1" data-type="option">
+                              June
+                            </li>
+                            <li class="select__option" data-id="2" data-type="option">
+                              July
+                            </li>
+                            <li class="select__option" data-id="3" data-type="option">
+                              August
+                            </li>
+                            <li class="select__option" data-id="4" data-type="option">
+                              September
+                            </li>
+                            <li class="select__option" data-id="5" data-type="option">
+                              November
+                            </li>
+                        </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="main-advert">
+                  <span class="main-advert__text">
+                    <svg width='18' height='18'>
+                      <use href='img/sprite/sprite.svg#alert'></use>
+                    </svg>
+                    Position of your advert 
+                    <b>1</b>
+                  </span>
+                  <span class="main-advert__value">
+                    <b>20$</b> / month
+                  </span>
+                </div>
+
+                <div class="download download--mode">
+    
+                  <div class="download__box">
+                  <div class="download__image">
+                    <img width="80" height="80">
+                  </div>
+
+                  <p>Please add a logo in .svg, .png, 
+                      .webp format with a size 
+                      of 150*150 pixels</p>
+
+                    </div>
+                    <label for="fileInput" class="download-btn">
+                      <svg width='20' height='20'>
+                        <use href='img/sprite/sprite.svg#download'></use>
+                      </svg>
+                      Download / Change photo
+                    </label>
+                
+    
+                  <input class="download__input" type="file" id="fileInput" accept="image/*">
+                </div>
+                
+                <label for="mess" class="main-form__label">
+                  <textarea name="mess" id="mess" class="main-form__area main-form__area--mode" placeholder="Describe your business"></textarea>
+                </label>
+
+                  <button class="yellow-btn">To pay</button>
+                </div>
+              </div>
+
+                <div class="banner-card banner-card--info">
+                  <div class="banner-card__bg">
+                    <picture>
+                      <source type='image/webp' srcset='img/cabinet/banner.webp'>
+                      <img width='335' height='199' src='img/cabinet/banner.png' alt='image'>
+                    </picture>
+                  </div>
+                  <span class="banner-card__title">Looking<br>
+                    to advertise<br> 
+                    for your business?</span>
+                </div>
+                
+              </form>
+
+         
+          
+           
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+  @include('partials/footer.html')
+  @include('partials/modals.html')
+</body>
+<script src="js/main.js"></script>
+
+</html>

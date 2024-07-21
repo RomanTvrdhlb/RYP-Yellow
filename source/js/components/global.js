@@ -1,9 +1,11 @@
-import {toggleCustomClass, fadeIn, fadeOut} from '../functions/customFunctions';
+import {toggleCustomClass, fadeIn, fadeOut, addCustomClass, removeCustomClass} from '../functions/customFunctions';
 
 const navBox = document.querySelector('.nav-box');
 const hideParent = document.querySelector('[data-hide-parent]');
 const dataHidden = document.querySelectorAll("[data-clip]");
 const warnCards = document.querySelectorAll('.warn-card');
+const servicesCards = document.querySelectorAll('.services-card');
+const serviceCards = document.querySelectorAll('.service-card');
 
 if(navBox){
     const btn = navBox.querySelector('.nav-box__btn');
@@ -114,4 +116,40 @@ if(warnCards){
       }
     })
   })
+}
+
+if(servicesCards){
+  servicesCards.forEach(function(card){
+    const closeBtn = card.querySelector('.services-card__close');
+    const item = card.parentNode;
+    const parent = item.parentNode;
+
+    closeBtn && closeBtn.addEventListener('click', function(e){
+      e.preventDefault();
+      item.removeChild(card);
+      item.remove();
+
+      if (parent.children.length === 0) {
+        parent.remove();
+      }
+    })
+  })
+}
+
+if (serviceCards) {
+  serviceCards.forEach(function(card) {
+      const wrapp = card.querySelector('.service-card__wrapp');
+      const btn = card.querySelector('.edit-btn');
+
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        if (wrapp.style.maxHeight) {
+            wrapp.style.maxHeight = null;
+            removeCustomClass(card, 'active');
+        } else {
+            wrapp.style.maxHeight = wrapp.scrollHeight + 'px';
+            addCustomClass(card, 'active');
+        }
+      });
+  });
 }
