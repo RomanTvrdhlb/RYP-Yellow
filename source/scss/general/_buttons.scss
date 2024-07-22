@@ -16,6 +16,12 @@
     background: rgba(var(--bg-d),.75);
     transform: translateY(2px);
   }
+
+  &:disabled{
+    color: rgba(var(--cl-j),1.0);
+    background-color: rgba(var(--bg-c),1.0);
+    pointer-events: none;
+  }
 }
 
 .black-btn {
@@ -35,6 +41,13 @@
   &:hover{
     background: rgba(var(--bg-d),1);
     transform: translateY(2px);
+  }
+
+  &:disabled{
+    color: rgba(var(--cl-j),1.0);
+    background-color: rgba(var(--bg-c),1.0);
+    border-color: rgba(var(--bg-c),1.0);
+    pointer-events: none;
   }
 }
 
@@ -57,6 +70,13 @@
     color: rgba(var(--cl-h),1.0);
     border-color: var(--br-b);
     transform: translateY(2px);
+  }
+
+  &:disabled{
+    color: rgba(var(--cl-j),1.0);
+    background-color: rgba(var(--bg-c),1.0);
+    border-color: rgba(var(--bg-c),1.0);
+    pointer-events: none;
   }
 }
 
@@ -145,6 +165,7 @@
   padding: 14px clamp(15px, 2.1429vw, 30px);
   height: 48px;
   width: fit-content;
+  min-width: 235px;
   grid-gap: 10px;
   display: flex;
   align-items: center;

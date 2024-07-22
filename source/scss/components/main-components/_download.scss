@@ -81,8 +81,16 @@
 
     &--mode{
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: clamp(16px, 1.7857vw, 25px);
+
+        @include for-mobile{
+            grid-gap: clamp(16px, 1.7857vw, 25px);
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mobile{
+            grid-gap: 24px clamp(16px, 1.7857vw, 25px);
+            grid-template-columns: repeat(auto-fill, minmax(235px, 1fr));
+        }
 
         .download{
 
@@ -95,6 +103,10 @@
                
                 img,picture{
                     border-radius: inherit;
+                }
+
+                @include small-tablet{
+                    margin: 0;
                 }
             }
         }

@@ -49,6 +49,7 @@ if (select.length) {
         selectCurrent.innerHTML = innerSelect;
         selectInput.setAttribute("value", e.target.getAttribute("data-id"));
         selectCurrent.setAttribute("data-id", e.target.getAttribute("data-id"));
+        addCustomClass(selectCurrent, 'check');
       }
 
       items.forEach(function (item) {item.style.display = "flex"});

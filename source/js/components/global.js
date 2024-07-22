@@ -153,3 +153,28 @@ if (serviceCards) {
       });
   });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const textAreas = document.querySelectorAll('textarea[data-area]');
+  const maxChars = 64;
+
+  textAreas.forEach(textArea => {
+      textArea.addEventListener('input', limitLines);
+      window.addEventListener('resize', limitLines);
+      limitLines();
+  });
+
+  function isMobile() {
+      return window.innerWidth <= 450;
+  }
+
+  function limitLines() {
+      if (isMobile()) {
+          textAreas.forEach(textArea => {
+              if (textArea.value.length > maxChars) {
+                  textArea.value = textArea.value.slice(0, maxChars) + '...';
+              }
+          });
+      }
+  }
+});

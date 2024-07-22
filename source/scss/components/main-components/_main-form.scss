@@ -105,6 +105,7 @@
         padding: 13px clamp(9px, 1.1429vw, 16px) 14px;
         border: 1px solid var(--br-e);
         border-radius: 6px;
+        line-height: 118%;
 
         @include for-mobile{
             font-weight: 400;
@@ -113,13 +114,13 @@
         @include mobile{
             font-weight: 500;
         }
-
+    
         &::placeholder{
             font-family: var(--font-family);
             font-weight: 400;
             font-size: clamp(14px, 1.1429vw, 16px);
             color: rgba(var(--cl-f),1.0);
-
+            
             @include for-mobile{
                 font-weight: 400;
             }
@@ -131,6 +132,21 @@
 
         &--mode{
             min-height: 100px;
+        }
+
+        &:disabled{
+            overflow: hidden;
+            background-color: transparent;
+            text-overflow: ellipsis;
+        }
+        &::-webkit-scrollbar-thumb{
+            border-radius:0 6px 6px 0;
+        }
+        &::-webkit-scrollbar-track{
+            border-radius:  0 6px 6px 0;
+        }
+        &::-webkit-scrollbar{
+            border-radius: 0 6px 6px 0;
         }
     }
 
@@ -216,6 +232,12 @@
         font-size: clamp(16px, 1.2857vw, 18px);
         color: rgba(var(--cl-c),1.0);
         line-height: 118%;
+    }
+
+    &__aside{
+        display: flex;
+        flex-direction: column;
+        grid-gap: clamp(17px, 1.4286vw, 20px);
     }
 
     &__status{
@@ -327,12 +349,18 @@
 
     &__choice{
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
         width: 100%;
         grid-gap: clamp(16px, 1.4286vw, 20px) clamp(16px, 1.7857vw, 25px);
 
-        .select:first-child{
-            grid-column: 1/-1;
+        @include for-mobile{
+            grid-template-columns: repeat(2, 1fr);
+            .select:first-child{
+                grid-column: 1/-1;
+            }
+        }
+
+        @include mobile{
+            grid-template-columns: 100%;
         }
     }
 
@@ -344,6 +372,13 @@
         @include mobile{
             margin-bottom: 3px;
         }
+    }
+
+    &__btns{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-gap: 16px;
     }
 }
 
@@ -498,24 +533,106 @@
         grid-template-columns: 100%;
     }
 
+    .form-nav{
+        @include for-mobile{
+            margin-bottom: 10px;
+            width: calc(100% + (clamp(10px, 2vw, 28px) * 2));
+            flex-shrink: 0;
+        }
+
+        @include mobile{
+            width: calc(100% + 20px);
+            margin-left: -10px;
+        }
+    }
+
+    .yellow-btn{
+        padding: 14px 71px;
+        
+        @include for-mobile{
+            margin-top: 4px;
+        }
+
+        @include mobile{
+            margin-top: 8px;
+        }
+    }
+
+    .main-advert{
+        @include for-mobile{
+            margin-top: -10px;
+        }
+    }
+
     .main-form{
 
         &__title{
             font-size: clamp(19px, 2.1429vw, 30px);
             padding: 0;
+            font-weight: 700;
+
+            @include small-tablet{
+                text-align: center;
+                margin: 0;
+            }
         }
+
+        
+    &__btns{
+ 
+
+        .hidden-btn{
+            margin-bottom: 8px;
+        }
+
+        .yellow-btn, .transparent-btn{
+            @include for-mobile{
+                width: 186px;
+                padding: 14px 30px;
+            }
+        }
+    }
 
         &__box{
             grid-gap: 30px;
+        }
+
+        &__status{
+            width: 100%;
         }
 
         &__inner{
             border-radius: 10px;
             box-shadow: 0 2px 4px 0 rgba(0, 125, 173, 0.2);
             background: rgba(var(--bg-a),1.0);
-            padding: 0 clamp(10px, 1vw, 14px) clamp(30px, 3.5714vw, 50px) clamp(10px, 2vw, 28px);
             flex-direction: column;
             width: 100%;
+
+            @include for-mobile{
+                padding: 0 clamp(10px, 1vw, 14px) clamp(30px, 3.5714vw, 50px) clamp(10px, 2vw, 28px);
+            }
+
+            @include mobile{
+                padding: 0 10px 30px;
+                grid-gap: 16px;
+            }
+        }
+    }
+
+    .download{
+        @include laptop{
+            @include for-tablet{
+                justify-items: center;
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+    }
+
+    .select__current{
+        color: rgba(var(--cl-f),1.0);
+
+        &.check{
+            color: rgba(var(--cl-c), 1);
         }
     }
 }
