@@ -5,3 +5,7 @@ import './components/modals';
 import './components/select';
 import './components/sliders';
 import './components/download';
+import './components/fancybox';
+import './components/anchor';
+import './components/acc';
+import './components/tabs';

@@ -2,7 +2,7 @@ html {
   box-sizing: border-box;
   width: 100%;
   max-width: 100dvw;
-  // scroll-behavior: smooth;
+  scroll-behavior: smooth;
   will-change: font-size;
   font-size: var(--rem-function);
 
@@ -308,5 +308,27 @@ select:-webkit-autofill:focus {
   &.loaded{
     opacity: 0;
     visibility: hidden;
+  }
+}
+
+.editor{
+  display: flex;
+  flex-direction: column;
+  grid-gap: 16px;
+
+  p{
+    font-size: clamp(14px, 1.1429vw, 16px);
+  }
+
+  h1{
+    font-size: clamp(32px, 4.2857vw, 60px);
+  }
+
+  h2,h3,h4{
+    font-size: clamp(26px, 3.2857vw, 46px);
+  }
+
+  h5,h6{
+    font-size: clamp(18px, 1.4286vw, 20px);
   }
 }

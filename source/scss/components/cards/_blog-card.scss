@@ -4,7 +4,7 @@
     position: relative;
     z-index: 1;
 
-    button{
+    .yellow-btn, .black-btn, .transparent-btn{
         position: absolute;
         bottom: clamp(40px, 6.4286vw, 90px);
         left: 50%;

@@ -106,8 +106,7 @@
       line-height: 110%;
 
       @include mobile{
-        max-height: 54px;
-        overflow: hidden;
+        font-weight: 500;
       }
     }
 
@@ -116,13 +115,20 @@
         display: none;
       }
     }
+
+    .editor{
+      @include mobile{
+        max-height: 46px;
+        overflow: hidden;
+      }
+    }
   }
 
   &--business{
 
     .main-top--mode{
       @include small-tablet{
-        order: 4;
+        order: -2;
         margin: 10px 0 5px;
       }
     }
@@ -139,7 +145,7 @@
 
     .filter-slider{
       @include tablet{
-        order: 5;
+        order: -1;
         grid-column: 1/-1;
       }
     }

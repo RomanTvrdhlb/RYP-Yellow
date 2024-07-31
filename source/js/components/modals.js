@@ -7,24 +7,6 @@ import {
   removeCustomClass,fadeOut,fadeIn
 } from "../functions/customFunctions";
 
-export function modalClickHandler(box, attribute, activeClass, overlayClassMode = activeMode, overlayClass = activeClass) {
-  const curentModal = overlay.querySelector(`[data-popup="${attribute}"]`);
-  removeClassInArray(modals, activeClass);
-  addCustomClass(overlay, overlayClass);
-  addCustomClass(overlay, overlayClassMode);
-  addCustomClass(curentModal, activeClass);
-  fadeIn(curentModal, 200, 'flex')
-  disableScroll();
-
-  innerButton = curentModal.querySelector('.close');
-
-  if(box){
-    innerButton.addEventListener('click', function(e){
-      fadeIn(box, 200, 'flex');
-    })
-  } 
-}
-
 const {
   overlay,
   activeClass,
@@ -39,6 +21,7 @@ let innerButton;
 const commonFunction = function () {
   removeCustomClass(overlay, activeMode);
   removeCustomClass(overlay, activeClass);
+  removeCustomClass(overlay, 'mode');
   removeClassInArray(modals, activeClass);
 
   modals.forEach((modal) => fadeOut(modal, 300))
@@ -67,6 +50,11 @@ function buttonClickHandler(e, buttonAttribute, activeClass) {
   burger && removeClassInArray(burger, activeClass);
 
   removeClassInArray(modals, activeClass);
+
+  if (currentModal && currentModal.getAttribute('data-popup') === 'filter') {
+    addCustomClass(overlay, 'mode');
+  }
+
   addCustomClass(overlay, activeClass);
   addCustomClass(overlay, activeMode);
   addCustomClass(currentModal, activeClass);

@@ -3,6 +3,7 @@
     min-height: calc(clamp(592px, 67.2143vw, 941px) - clamp(50px, 8.3571vw, 117px));
     position: relative;
     z-index: 1;
+    overflow: hidden;
     
     &__bg{
         pointer-events: none;

@@ -124,9 +124,121 @@
                 <button class="hidden-btn">More categories</button>
             </div>
         </div>
-      </div>
+    </div>
 
+    <div class="modal write" data-popup="write">
+        <button class="close" aria-label="Закрыть модальное окно">
+          <svg width="20" height="20">
+            <use href="img/sprite/sprite.svg#close"></use>
+          </svg>
+        </button>
 
+        <div class="modal__box">
+            <span class="modal__title">Write moderator</span>
+
+            <form class="main-form">
+                <label for="name_full" class="main-form__label">
+                  <input type="text" name="name_full" id="name_full" class="main-form__input" placeholder="Full name">
+                </label>
+                <label for="phone_3" class="main-form__label">
+                  <input type="tel" name="phone_3" id="phone_3" class="main-form__input" placeholder="Phone">
+                </label>
+                <label for="email_3" class="main-form__label">
+                  <input type="email" name="email_3" id="email_3" class="main-form__input" placeholder="E-mail">
+                </label>
+                <label for="problem" class="main-form__label">
+                  <textarea name="problem" id="problem" class="main-form__area main-form__area--mode" placeholder="Describe your problem"></textarea>
+                </label>
+  
+                <button class="yellow-btn">Submit</button>
+              </form>
+
+              <p>By clicking the Submit button, I agree to the following 
+                to the processing of personal data</p>
+        </div>
+    </div>
+
+    <div class="modal edit" data-popup="edit">
+
+        <div class="modal__box">
+            <div class="modal__top">
+                <span class="modal__subtitle">24/7 Emergency Locksmith</span>
+                <span class="modal__adress">NJ</span>
+            </div>
+
+            <form class="main-form">
+                <label for="company_4" class="main-form__label">
+                    <input type="text" name="company_4" id="company_4" class="main-form__input" placeholder="Company Name">
+                  </label>
+                  <label for="adress_4" class="main-form__label">
+                    <input type="text" name="adress_4" id="adress_4" class="main-form__input" placeholder="Adress">
+                  </label>
+                  <label for="phone_4" class="main-form__label">
+                    <input type="tel" name="phone_4" id="phone_4" class="main-form__input" placeholder="Phone">
+                  </label>
+                  <label for="email_4" class="main-form__label">
+                    <input type="email" name="email_4" id="email_4" class="main-form__input" placeholder="E-mail">
+                  </label>
+  
+                  <div class="modal__btns">
+                    <button class="yellow-btn">Save</button>
+                    <button class="transparent-btn close">Cansel</button>
+                  </div>
+              </form>
+        </div>
+    </div>
+
+    <div class="modal change" data-popup="change">
+        <button class="close" aria-label="Закрыть модальное окно">
+            <svg width="20" height="20">
+              <use href="img/sprite/sprite.svg#close"></use>
+            </svg>
+          </button>
+  
+          <div class="modal__box">
+              <span class="modal__title">Data change request</span>
+
+            <form class="main-form">
+                <label for="full_name_5" class="main-form__label">
+                    <input type="text" name="full_name_5" id="full_name_5" class="main-form__input" placeholder="Full name">
+                  </label>
+                  <label for="phone_5" class="main-form__label">
+                    <input type="tel" name="phone_5" id="phone_5" class="main-form__input" placeholder="Phone">
+                  </label>
+                  <label for="email_5" class="main-form__label">
+                    <input type="email" name="email_5" id="email_5" class="main-form__input" placeholder="Mail">
+                  </label>
+
+                  <div class="main-form__inner">
+                    <label for="code_5" class="main-form__label">
+                      <input type="number" name="code_5" id="code_5" class="main-form__input" placeholder="Write code">
+                    </label>
+
+                    <div class="main-form__wrapp">
+                      <div class="main-form__code">
+                        <div class="main-form__code-bg">
+                          <picture>
+                            <source type='image/webp' srcset='img/index/code.webp'>
+                            <img width='124' height='50' src='img/index/code.png' alt='image'>
+                          </picture>
+                        </div>
+                        <span class="main-form__code-value">113236</span>
+                      </div>
+
+                      <button class="main-form__refresh">
+                        <svg width='20' height='20'>
+                          <use href='img/sprite/sprite.svg#refresh'></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+
+                  <button class="yellow-btn">Submit</button>
+              </form>
+                <p>By clicking the Submit button, I agree to the following 
+                    to the processing of personal data</p>
+            </div>
+    </div>
 </div>
 
 

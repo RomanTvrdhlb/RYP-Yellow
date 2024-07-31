@@ -31,6 +31,16 @@
 
         &-slide{
             padding-bottom:5px;
+            // height: 100%;
+            // @include for-tablet{
+            //     max-height: calc(clamp(177px, 14.2143vw, 199px) + 5px);
+            // }
+        
+            // @include tablet{
+            //     @include for-small-tablet{
+            //         max-height: calc(clamp(180px, 27.734vw, 284px) + 5px);
+            //     }
+            // }
         }
     }
 

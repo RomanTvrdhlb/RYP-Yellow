@@ -1,7 +1,6 @@
 .form-nav{
-    overflow: hidden;
-
     @include for-mobile{
+        overflow: hidden;
         display: flex;
         width: 100%;
         border-radius: 10px 0 0 0;
@@ -16,7 +15,9 @@
 
     &__item{
         @include mobile{
-            &:last-child{
+            &:last-of-type{
+                overflow: hidden;
+                border-radius: 0 10px 0 0;
                 grid-column: 2/3;
                 grid-row: 1;
             }
@@ -62,12 +63,17 @@
             }
 
             &.active{
+                
                 svg{
                     display: none;
                 }
                 .form-nav__btn-text{
                     max-width: initial;
                     display: inline;
+                }
+
+                @include mobile{
+                    border-radius: 0 10px 0 0;
                 }
             }
         }
@@ -97,8 +103,8 @@
         }
 
         &--mode{
-            .form-nav__btn-text{
-                font-size: clamp(14px, 1.1429vw, 16px);
+            @include mobile{
+                display: none;
             }
         }
     
@@ -111,6 +117,7 @@
             width: fit-content;
             max-width: 77px;
             position: relative;
+            pointer-events: none;
 
             &::before{
                 position: absolute;
@@ -128,17 +135,73 @@
             }
         }
 
-        &-arrow{
-            @include for-mobile{
-                display: none;
-            }
-            position: relative;
-            top: -2px;
+        svg,img{
+            pointer-events: none;
+        }
+    }
 
-            svg{
-                fill: none;
-                stroke:rgba(var(--cl-c),1.0);
+    .select{
+
+        &.active{
+            box-shadow: 0 3px 4px 0 rgba(0, 125, 173, 0.2);
+        }
+
+        @include for-mobile{
+            display: none;
+        }
+
+        border-radius: 10px 0 0 0;
+        height: 54px;
+
+        &:after{
+            left: -1px;
+            right: -1px;
+            bottom: -1px;
+        }
+
+        &__header{
+            justify-content: center;
+            grid-gap: 8px;
+            height: 54px;
+        }
+
+        &__list{
+            &:has(> .select__option:nth-child(2):nth-last-child(2)) {
+                .select__option:nth-child(2) {
+                 border-bottom: none;
+                }
+              }
+
+              grid-gap: 5px;
+              padding: 5px 0 7px;
+        }
+
+        &__option{
+            justify-content: center;
+            padding: 13px 0 8px;
+            border-bottom: none;
+            
+            &:not(:first-of-type, :nth-of-type(2)){
+                border-top: solid 1px var(--br-d);
+            }
+            
+        }
+
+        &__current{
+            width: fit-content;
+            flex-grow: initial;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: inline-block;
+
+            @include for-ios{
+                max-width: clamp(110px, 36.931vw, 200px);
+            }
+
+            @include ios{
+                max-width: clamp(110px, 34.931vw, 200px);
             }
         }
+        
     }
 }

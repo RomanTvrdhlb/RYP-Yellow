@@ -26,8 +26,14 @@
     p {
       line-height: 110%;
 
+      @include mobile{
+        font-weight: 500;
+      }
+    }
+
+    .editor{
       @include mobile {
-        max-height: 54px;
+        max-height: 46px;
         overflow: hidden;
       }
     }

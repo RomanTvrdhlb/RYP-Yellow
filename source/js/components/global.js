@@ -6,6 +6,8 @@ const dataHidden = document.querySelectorAll("[data-clip]");
 const warnCards = document.querySelectorAll('.warn-card');
 const servicesCards = document.querySelectorAll('.services-card');
 const serviceCards = document.querySelectorAll('.service-card');
+const textAreas = document.querySelectorAll('textarea[data-area]');
+const bannerCards = document.querySelectorAll('.banner-card');
 
 if(navBox){
     const btn = navBox.querySelector('.nav-box__btn');
@@ -140,6 +142,7 @@ if (serviceCards) {
   serviceCards.forEach(function(card) {
       const wrapp = card.querySelector('.service-card__wrapp');
       const btn = card.querySelector('.edit-btn');
+      const close = card.querySelector('.service-card__close');
 
       btn.addEventListener('click', function(e) {
         e.preventDefault();
@@ -150,12 +153,23 @@ if (serviceCards) {
             wrapp.style.maxHeight = wrapp.scrollHeight + 'px';
             addCustomClass(card, 'active');
         }
+
+        if(card.classList.contains('active')){
+          window.addEventListener("resize", () => {
+            wrapp.style.maxHeight = wrapp.scrollHeight + 'px';
+          });
+        }
       });
+
+      close.addEventListener('click', function(e){
+        e.preventDefault();
+        wrapp.style.maxHeight = null;
+        removeCustomClass(card, 'active');
+      })
   });
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  const textAreas = document.querySelectorAll('textarea[data-area]');
+if(textAreas){
   const maxChars = 64;
 
   textAreas.forEach(textArea => {
@@ -177,4 +191,15 @@ document.addEventListener('DOMContentLoaded', () => {
           });
       }
   }
+}
+
+if(bannerCards){
+  bannerCards.forEach(card => {
+  card.addEventListener('click', function() {
+      const link = this.getAttribute('data-link');
+      if (link) {
+          window.open(link, '_blank');
+      }
+  });
 });
+}

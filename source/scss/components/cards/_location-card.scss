@@ -22,11 +22,11 @@
     padding: 21px 12px;
   }
 
-  &__image {
+  &__map {
     display: flex;
 
     img,
-    picture {
+    picture, iframe {
       width: 100%;
       height: 100%;
 
@@ -44,7 +44,13 @@
 
     @include small-tablet {
       width: 100%;
-      height: clamp(180px, 34.635vw, 266px);
+      @include for-mobile{
+        height: clamp(180px, 34.635vw, 266px);
+      }
+    }
+
+    @include mobile{
+      height: clamp(130px, 40.635vw, 232px);
     }
   }
 

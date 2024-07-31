@@ -1,6 +1,5 @@
 import Swiper from 'swiper';
 import vars from "../_vars";
-
 import {Navigation} from 'swiper/modules';
 
 const {
@@ -31,7 +30,6 @@ filterSliders && filterSliders.forEach(function(slider){
 
 });
 
-
 let swipers = [];
 
 function initSwipers() {
@@ -50,7 +48,6 @@ function initSwipers() {
           speed         : 800,
           observer      : true,
           observeParents: true,
-          autoHeight    : true,
           navigation: {
             nextEl: sliderNext,
             prevEl: sliderPrev,

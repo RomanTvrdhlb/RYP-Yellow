@@ -190,4 +190,49 @@
     }
   }
   
-  
+  .date-select {
+    position: relative;
+    width: 200px;
+}
+
+.date-select__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.date-select__body {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    z-index: 10;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.date-select__option {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.date-select__option:hover {
+    background-color: #f0f0f0;
+}
+
+.date-select__option-group {
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+    font-weight: bold;
+    background-color: #f9f9f9;
+}

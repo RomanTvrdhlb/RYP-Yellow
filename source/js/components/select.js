@@ -1,6 +1,4 @@
-import {addCustomClass, toggleCustomClass, removeCustomClass } from "../functions/customFunctions";
-import {disableScroll} from "../functions/disable-scroll";
-import {enableScroll} from "../functions/enable-scroll";
+import {addCustomClass, removeCustomClass } from "../functions/customFunctions";
 
 const closeSelect = function (selectBody, select , className = "active") {
   selectBody.style.height = 0;
@@ -72,3 +70,54 @@ if (select.length) {
   });
 }
 
+// document.addEventListener("DOMContentLoaded", () => {
+//   const months = [
+//       'January', 'February', 'March', 'April', 'May', 'June',
+//       'July', 'August', 'September', 'October', 'November', 'December'
+//   ];
+//   const currentYear = new Date().getFullYear();
+//   const yearRange = 10; // Діапазон років, які будуть відображатися
+
+//   const dateSelectHeader = document.getElementById('date-select-header');
+//   const dateSelectBody = document.getElementById('date-select-body');
+//   const selectedDate = document.getElementById('selected-date');
+
+//   // Populate months
+//   months.forEach((month, index) => {
+//       const option = document.createElement('div');
+//       option.className = 'date-select__option';
+//       option.textContent = month;
+//       option.dataset.value = `${index + 1}-month`;
+//       dateSelectBody.insertBefore(option, dateSelectBody.querySelector('.date-select__option-group + .date-select__option-group'));
+
+//       option.addEventListener('click', () => {
+//           selectedDate.textContent = month;
+//           dateSelectBody.style.display = 'none';
+//       });
+//   });
+
+//   // Populate years
+//   for (let year = currentYear - yearRange; year <= currentYear + yearRange; year++) {
+//       const option = document.createElement('div');
+//       option.className = 'date-select__option';
+//       option.textContent = year;
+//       option.dataset.value = `${year}-year`;
+//       dateSelectBody.appendChild(option);
+
+//       option.addEventListener('click', () => {
+//           selectedDate.textContent = year;
+//           dateSelectBody.style.display = 'none';
+//       });
+//   }
+
+//   dateSelectHeader.addEventListener('click', () => {
+//       dateSelectBody.style.display = dateSelectBody.style.display === 'block' ? 'none' : 'block';
+//   });
+
+//   // Закриття меню при кліку поза його межами
+//   document.addEventListener("click", function (event) {
+//       if (!dateSelectHeader.contains(event.target) && !dateSelectBody.contains(event.target)) {
+//           dateSelectBody.style.display = 'none';
+//       }
+//   });
+// });

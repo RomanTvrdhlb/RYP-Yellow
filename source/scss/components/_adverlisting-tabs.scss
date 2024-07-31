@@ -1,0 +1,24 @@
+.adverlisting-tabs{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px 0 rgba(0, 125, 173, 0.2);
+    background: rgba(var(--bg-a),1.0);
+    width: 100%;
+
+    @include for-mobile{
+        grid-gap: clamp(15px, 1.5vw, 21px);
+        padding: 0 clamp(10px, 1vw, 14px) clamp(30px, 3.5714vw, 50px) clamp(10px, 2vw, 28px);
+    }
+
+    @include mobile{
+        padding: 0 10px 30px;
+        grid-gap: 16px;
+    }
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        grid-gap: clamp(15px, 1.5vw, 21px);
+    }
+}
