@@ -48,6 +48,10 @@
   &--mode{
     font-size: clamp(16px, 2.1429vw, 30px);
   }
+
+  &--big{
+    font-size: clamp(18px, 2.1429vw, 30px);
+  }
 }
 
 .video{

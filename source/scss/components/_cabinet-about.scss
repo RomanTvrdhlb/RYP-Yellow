@@ -1,0 +1,79 @@
+.cabinet-about{
+    border-radius: 10px;
+    width: 100%;
+    height: fit-content;
+    background: rgba(var(--bg-c),1.0);
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(14px, 1.4286vw, 20px);
+    
+    padding: 25px clamp(13px, 1vw, 14px) clamp(24px, 2vw, 28px) clamp(16px, 1.2857vw, 18px);
+
+    &__list{
+        @include for-tablet{
+            display: flex;
+            flex-direction: column;
+        }
+
+        @include tablet {
+            @include for-mobile {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 0 15px;
+            }
+          }
+
+          @include mobile{
+            display: flex;
+            flex-direction: column;
+          }
+    }
+
+    &__item{
+        border-bottom: solid 1px var(--br-d);
+    }
+
+    &__title{
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: rgba(var(--cl-b),1.0);
+
+        b{
+            font-weight: 700;
+            color: rgba(var(--cl-h),1.0);
+        }
+    }
+    
+}
+
+.download-link{
+    padding: 10px 12px;
+    display: flex;
+    align-items: center;
+    grid-gap: 10px;
+    transition: all .3s;
+    position: relative;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    color: rgba(var(--cl-c),1.0);
+
+    &:hover{
+        background-color: rgba(var(--bg-e),.4);
+    }
+
+    &__icon{
+        display: flex;
+
+        &:last-of-type{
+            flex-grow: 1;
+            justify-content: flex-end;
+        }
+    }
+
+    svg{
+        fill: none;
+    }
+}

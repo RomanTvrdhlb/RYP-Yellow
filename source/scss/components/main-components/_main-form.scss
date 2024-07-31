@@ -134,6 +134,10 @@
             min-height: 100px;
         }
 
+        &--small{
+            min-height: 80px;
+        }
+
         &:disabled{
             overflow: hidden;
             background-color: transparent;

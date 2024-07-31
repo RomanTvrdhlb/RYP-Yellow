@@ -61,4 +61,16 @@
       }
     }
   }
+
+  .cabinet-about{
+    @include tablet {
+      @include for-small-tablet {
+        grid-column: 2/3;
+      }
+    }
+
+    @include small-tablet{
+      grid-row: 3;
+    }
+  }
 }

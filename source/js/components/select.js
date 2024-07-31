@@ -70,54 +70,24 @@ if (select.length) {
   });
 }
 
-// document.addEventListener("DOMContentLoaded", () => {
-//   const months = [
-//       'January', 'February', 'March', 'April', 'May', 'June',
-//       'July', 'August', 'September', 'October', 'November', 'December'
-//   ];
-//   const currentYear = new Date().getFullYear();
-//   const yearRange = 10; // Діапазон років, які будуть відображатися
+document.addEventListener("DOMContentLoaded", () => {
+  const selects = document.querySelectorAll('.date-select');
 
-//   const dateSelectHeader = document.getElementById('date-select-header');
-//   const dateSelectBody = document.getElementById('date-select-body');
-//   const selectedDate = document.getElementById('selected-date');
+  selects && selects.forEach(function(select){
+    const monthSelect = select.querySelector('[data-month]');
+    const yearSelect = select.querySelector('[data-year]');
+    const currentYear = new Date().getFullYear();
+    const currentMonth = new Date().getMonth();
 
-//   // Populate months
-//   months.forEach((month, index) => {
-//       const option = document.createElement('div');
-//       option.className = 'date-select__option';
-//       option.textContent = month;
-//       option.dataset.value = `${index + 1}-month`;
-//       dateSelectBody.insertBefore(option, dateSelectBody.querySelector('.date-select__option-group + .date-select__option-group'));
+    for (let i = currentYear - 5; i <= currentYear + 5; i++) {
+        const option = document.createElement('option');
+        option.value = i;
+        option.text = i;
+        yearSelect.appendChild(option);
+    }
 
-//       option.addEventListener('click', () => {
-//           selectedDate.textContent = month;
-//           dateSelectBody.style.display = 'none';
-//       });
-//   });
+      monthSelect.selectedIndex = currentMonth;
+      yearSelect.value = currentYear;
+  })
 
-//   // Populate years
-//   for (let year = currentYear - yearRange; year <= currentYear + yearRange; year++) {
-//       const option = document.createElement('div');
-//       option.className = 'date-select__option';
-//       option.textContent = year;
-//       option.dataset.value = `${year}-year`;
-//       dateSelectBody.appendChild(option);
-
-//       option.addEventListener('click', () => {
-//           selectedDate.textContent = year;
-//           dateSelectBody.style.display = 'none';
-//       });
-//   }
-
-//   dateSelectHeader.addEventListener('click', () => {
-//       dateSelectBody.style.display = dateSelectBody.style.display === 'block' ? 'none' : 'block';
-//   });
-
-//   // Закриття меню при кліку поза його межами
-//   document.addEventListener("click", function (event) {
-//       if (!dateSelectHeader.contains(event.target) && !dateSelectBody.contains(event.target)) {
-//           dateSelectBody.style.display = 'none';
-//       }
-//   });
-// });
+});
