@@ -131,58 +131,58 @@ const stylesBackend = () => {
 
 // scripts
 const scripts = () => {
-  return src(paths.srcMainJs)
-    .pipe(plumber(
-      notify.onError({
-        title: "JS",
-        message: "Error: <%= error.message %>"
-      })
-    ))
-    .pipe(webpackStream({
-      mode: isProd ? 'production' : 'development',
-      output: {
-        filename: 'main.js',
-      },
-      module: {
-        rules: [
-          {
-            test: /\.m?js$/,
-            exclude: /node_modules/,
-            use: {
-              loader: 'babel-loader',
-              options: {
-                presets: [
-                  ['@babel/preset-env', {
-                    targets: "defaults"
-                  }]
-                ]
-              }
-            }
-          },
-          {
-            type: 'javascript/auto',
-            test: /\.json$/,
-            include: /(lottie)/,
-            loader: 'lottie-web-webpack-loader',
-            options: {
-              assets: {
-                scale: 0.5
-              }
-            }
-          }
-        ]
-      },
-      devtool: !isProd ? 'source-map' : false,
-      resolve: {
-        fallback: {
-          "path": require.resolve("path-browserify")
-        }
-      }
-    }))
-    .on('error', function (err) {
-      console.error('WEBPACK ERROR', err);
-      this.emit('end');
-    })
+  return src(paths.srcFullJs)
+    // .pipe(plumber(
+    //   notify.onError({
+    //     title: "JS",
+    //     message: "Error: <%= error.message %>"
+    //   })
+    // ))
+    // .pipe(webpackStream({
+    //   mode: isProd ? 'production' : 'development',
+    //   output: {
+    //     filename: 'main.js',
+    //   },
+    //   module: {
+    //     rules: [
+    //       {
+    //         test: /\.m?js$/,
+    //         exclude: /node_modules/,
+    //         use: {
+    //           loader: 'babel-loader',
+    //           options: {
+    //             presets: [
+    //               ['@babel/preset-env', {
+    //                 targets: "defaults"
+    //               }]
+    //             ]
+    //           }
+    //         }
+    //       },
+    //       {
+    //         type: 'javascript/auto',
+    //         test: /\.json$/,
+    //         include: /(lottie)/,
+    //         loader: 'lottie-web-webpack-loader',
+    //         options: {
+    //           assets: {
+    //             scale: 0.5
+    //           }
+    //         }
+    //       }
+    //     ]
+    //   },
+    //   devtool: !isProd ? 'source-map' : false,
+    //   resolve: {
+    //     fallback: {
+    //       "path": require.resolve("path-browserify")
+    //     }
+    //   }
+    // }))
+    // .on('error', function (err) {
+    //   console.error('WEBPACK ERROR', err);
+    //   this.emit('end');
+    // })
     .pipe(dest(paths.buildJsFolder))
     .pipe(browserSync.stream());
 }

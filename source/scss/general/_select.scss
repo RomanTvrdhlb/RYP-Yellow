@@ -231,8 +231,15 @@
         font-size: clamp(14px, 1.1429vw, 16px);
       }
     }
+  }
+  .air-datepicker{
+    margin-top: 5px !important;
 
-    .qs-datepicker-container{
-      margin-top: 15px;
+    .air-datepicker-cell.-month-.-selected-{
+        background-color: #f2b50f;
+    }
+
+    .air-datepicker-cell.-current-{
+      color: #f2b50f;
     }
   }
