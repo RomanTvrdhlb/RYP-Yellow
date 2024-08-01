@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", function(e) {
 const parrentsImage = document.querySelectorAll('.download');
 
 parrentsImage && parrentsImage.forEach(downloadBlock => {
@@ -15,3 +16,4 @@ parrentsImage && parrentsImage.forEach(downloadBlock => {
         }
     });
 });
+})

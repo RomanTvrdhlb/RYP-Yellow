@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", function(e) {
 const anchors = document.querySelectorAll("[data-scroll]");
 
 anchors &&
@@ -12,3 +13,4 @@ anchors &&
       }
     });
   });
+})

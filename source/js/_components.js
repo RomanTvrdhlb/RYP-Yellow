@@ -9,3 +9,4 @@ import './components/fancybox';
 import './components/anchor';
 import './components/acc';
 import './components/tabs';
+import './components/datapicker';

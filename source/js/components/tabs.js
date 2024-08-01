@@ -11,6 +11,7 @@ const tabsFunction = function (
   tabsDataInitArray,
   tabsNavAttr,
   tabsContentAttr,
+  tabsAsideAttr,
   active = "active"
 ) {
   tabsDataInitArray &&
@@ -20,7 +21,9 @@ const tabsFunction = function (
         const tabContent = [
           ...tabParent.querySelectorAll(`[${tabsContentAttr}]`),
         ];
-
+        const tabAside = [
+          ...tabParent.querySelectorAll(`[${tabsAsideAttr}]`),
+        ];
 
         tabNav.map((nav) => {
           nav.addEventListener("click", (e) => {
@@ -28,6 +31,7 @@ const tabsFunction = function (
             const activeTabAttr = e.target.getAttribute(`${tabsNavAttr}`);
             removeClassInArray(tabNav, active);
             removeClassInArray(tabContent, active);
+            removeClassInArray(tabAside, active);
             addClassInArray(
               tabParent.querySelectorAll(`[${tabsNavAttr}="${activeTabAttr}"]`),
               active
@@ -38,11 +42,18 @@ const tabsFunction = function (
               ),
               active
             );
-
+            addCustomClass(
+              tabParent.querySelector(
+                `[${tabsAsideAttr}="${activeTabAttr}"]`
+              ),
+              active
+            );
           });
         });
       }
     });
 };
 
-tabsFunction(document.querySelectorAll("[data-tabs-parrent]"), "data-tab", "data-tab-content");
+document.addEventListener("DOMContentLoaded", function(e) {
+  tabsFunction(document.querySelectorAll("[data-tabs-parrent]"), "data-tab", "data-tab-content", "data-aside-content");
+})

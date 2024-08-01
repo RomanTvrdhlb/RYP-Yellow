@@ -155,10 +155,6 @@
         align-items: center;
         justify-content: center;
       }
-  
-      // &[data-id='2']{
-      //   padding-top: 0;
-      // }
     }
   }
   
@@ -193,79 +189,50 @@
   .date-select {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    grid-gap: 10px;
     border-radius: 6px;
     height: clamp(37px, 2.7857vw, 39px);
 
-    &__inner{
-      display: flex;
-      width: 100%;
-      height: 100%;
-      padding: 5px 25px 4px 5px;
-      position: relative;
-      border: 1px solid var(--br-e);
-      border-radius: 6px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: clamp(14px, 1.1429vw, 16px);
+    color:rgba(var(--cl-c),1.0);
+    cursor: pointer;
+    padding: 5px 5px 4px 5px;
+    border: 1px solid var(--br-e);
+    position: relative;
 
-      &::after {
-        content: '';
-        position: absolute;
-        right: 10px;
-        top: 50%;
-        transform: translateY(-50%);
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7' fill='none'%3E%3Cpath stroke='%231D1D1D' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.4' d='m1 1 5 5 5-5'/%3E%3C/svg%3E");
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        width: 10px;
-        height: 6px;
-        pointer-events: none;
-      }
+    &::after {
+      content: '';
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7' fill='none'%3E%3Cpath stroke='%231D1D1D' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.4' d='m1 1 5 5 5-5'/%3E%3C/svg%3E");
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 10px;
+      height: 6px;
+      pointer-events: none;
     }
-  
-    select{
-      border-radius: 6px;
-      width: 100%;
-      height: 100%;
-      border: none !important;
-      outline: none !important;
+
+    input{
       font-family: var(--font-family);
       font-weight: 500;
       font-size: clamp(14px, 1.1429vw, 16px);
       color:rgba(var(--cl-c),1.0);
       cursor: pointer;
-      line-height: 100%;
-      transition: all .3s;
-      padding: 0 5px;
-      appearance: none;
-      -webkit-appearance: none;
-      -moz-appearance: none;
+      padding-right: 25px;
 
-      &::-ms-expand {
-        display: none;
+      &::placeholder{
+        color: rgba(var(--cl-f), 1);
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: clamp(14px, 1.1429vw, 16px);
       }
     }
 
-    option {
-      display: flex;
-      padding: 10px 0;
-      align-items: center;
-      grid-gap: 5px;
-      width: 100%;
-      cursor: pointer;
-      line-height: 100%;
-      transition: all .3s;
-      font-family: var(--font-family);
-      font-weight: 500;
-      font-size: clamp(14px, 1.1429vw, 16px);
-      color:rgba(var(--cl-c),1.0);
-  
-      &:hover {
-        color: rgba(var(--cl-e),1.0);
-      }
-  
+    .qs-datepicker-container{
+      margin-top: 15px;
     }
   }
-  .date-select__dropdown::-ms-expand {
-    display: none;
-}

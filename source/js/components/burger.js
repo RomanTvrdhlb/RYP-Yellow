@@ -3,6 +3,9 @@ import { enableScroll } from '../functions/enable-scroll';
 import vars from '../_vars';
 
 import {toggleClassInArray, toggleCustomClass, removeCustomClass, removeClassInArray, fadeIn, fadeOut, addCustomClass} from '../functions/customFunctions';
+
+document.addEventListener("DOMContentLoaded", function(e) {
+
 const {overlay, burger, mobileMenu} = vars;
 
 const mobileMenuHandler = function(overlay, mobileMenu, burger) {
@@ -34,3 +37,5 @@ if (overlay) {
     hideMenuHandler(overlay,mobileMenu,burger) : null;
   });
 }
+
+})

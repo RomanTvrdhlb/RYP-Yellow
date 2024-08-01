@@ -1,5 +1,7 @@
 import {toggleCustomClass, fadeIn, fadeOut, addCustomClass, removeCustomClass} from '../functions/customFunctions';
 
+document.addEventListener("DOMContentLoaded", function(e) {
+
 const navBox = document.querySelector('.nav-box');
 const hideParent = document.querySelector('[data-hide-parent]');
 const dataHidden = document.querySelectorAll("[data-clip]");
@@ -203,3 +205,5 @@ if(bannerCards){
   });
 });
 }
+
+})

@@ -242,6 +242,11 @@
         display: flex;
         flex-direction: column;
         grid-gap: clamp(17px, 1.4286vw, 20px);
+
+        &-box{
+            flex-direction: column;
+            grid-gap: clamp(17px, 1.4286vw, 20px);
+        }
     }
 
     &__status{

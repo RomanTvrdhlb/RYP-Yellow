@@ -14,6 +14,8 @@ const checkIsSelectOpen = function (select) {
   return select.classList.contains('active');
 }
 
+
+document.addEventListener("DOMContentLoaded", function(e) {
 const select = document.querySelectorAll("[data-select]");
 
 if (select.length) {
@@ -69,25 +71,4 @@ if (select.length) {
     });
   });
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-  const selects = document.querySelectorAll('.date-select');
-
-  selects && selects.forEach(function(select){
-    const monthSelect = select.querySelector('[data-month]');
-    const yearSelect = select.querySelector('[data-year]');
-    const currentYear = new Date().getFullYear();
-    const currentMonth = new Date().getMonth();
-
-    for (let i = currentYear - 5; i <= currentYear + 5; i++) {
-        const option = document.createElement('option');
-        option.value = i;
-        option.text = i;
-        yearSelect.appendChild(option);
-    }
-
-      monthSelect.selectedIndex = currentMonth;
-      yearSelect.value = currentYear;
-  })
-
-});
+})

@@ -24,6 +24,8 @@ function stickyHeaderFunction(breakpoint){
   }
 }
 
-stickyHeaderFunction(320);
-elementHeight(header, 'header-height');
 
+document.addEventListener("DOMContentLoaded", function(e) {
+  stickyHeaderFunction(320);
+  elementHeight(header, 'header-height');
+})

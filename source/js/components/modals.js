@@ -7,6 +7,8 @@ import {
   removeCustomClass,fadeOut,fadeIn
 } from "../functions/customFunctions";
 
+document.addEventListener("DOMContentLoaded", function(e) {
+
 const {
   overlay,
   activeClass,
@@ -76,12 +78,12 @@ function modalInit(buttonsArray, buttonAttribute, activeClass) {
   });
 }
 
-overlay && overlay.addEventListener("click", function (e) {
-  overlayClickHandler(e, activeClass);
-});
+  overlay && overlay.addEventListener("click", function (e) {
+    overlayClickHandler(e, activeClass);
+  });
 
-modalInit(modalsButton, "data-btn-modal", activeClass);
-
+  modalInit(modalsButton, "data-btn-modal", activeClass);
+})
 
 
 
