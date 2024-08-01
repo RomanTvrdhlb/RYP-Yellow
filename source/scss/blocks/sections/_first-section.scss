@@ -27,7 +27,7 @@
   .filter-btn{
     z-index: 40;
     position: fixed;
-    right: 0;
+    right: var(--container-offset);
    
     @include for-small-tablet{
       bottom: 10px;
